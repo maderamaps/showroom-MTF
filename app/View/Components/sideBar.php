@@ -40,6 +40,10 @@ class sideBar extends Component
             [
                 'label'=> 'Profil',
                 'url'=>'Profil'
+            ],
+            [
+                'label'=> 'Registrasi',
+                'url'=>'Registrasi'
             ]
         ];
     }
