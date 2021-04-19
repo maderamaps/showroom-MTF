@@ -1,0 +1,35 @@
+.sidebar {
+  height: 100%;
+  width: 207px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #EEEEEE;
+  overflow-x: hidden;
+  padding-top: 60px;
+  z-index: 0;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  width: 100%;
+}
+
+.sidebar a:hover {
+  color: #DBAA56;
+  font-size: 18px;
+}
+
+.sidebar h3 {
+  padding: 6px 8px 6px 16px;
+}
+
+.menu.active {
+  background-color: #CCCCCC;
+}
+
+
