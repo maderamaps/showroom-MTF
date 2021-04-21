@@ -12,6 +12,8 @@ return array(
     'App\\Actions\\Fortify\\UpdateUserPassword' => $baseDir . '/app/Actions/Fortify/UpdateUserPassword.php',
     'App\\Actions\\Fortify\\UpdateUserProfileInformation' => $baseDir . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Events\\ApproveTransaksi' => $baseDir . '/app/Events/ApproveTransaksi.php',
+    'App\\Events\\RegisterConfirm' => $baseDir . '/app/Events/RegisterConfirm.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Admin\\HomeController' => $baseDir . '/app/Http/Controllers/Admin/HomeController.php',
     'App\\Http\\Controllers\\Admin\\ProfilController' => $baseDir . '/app/Http/Controllers/Admin/ProfilController.php',

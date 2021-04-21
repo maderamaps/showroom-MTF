@@ -547,6 +547,8 @@ class ComposerStaticInitadb9ab388055c0748289ba357fa6769e
         'App\\Actions\\Fortify\\UpdateUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserPassword.php',
         'App\\Actions\\Fortify\\UpdateUserProfileInformation' => __DIR__ . '/../..' . '/app/Actions/Fortify/UpdateUserProfileInformation.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Events\\ApproveTransaksi' => __DIR__ . '/../..' . '/app/Events/ApproveTransaksi.php',
+        'App\\Events\\RegisterConfirm' => __DIR__ . '/../..' . '/app/Events/RegisterConfirm.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/HomeController.php',
         'App\\Http\\Controllers\\Admin\\ProfilController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProfilController.php',
