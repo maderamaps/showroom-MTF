@@ -19,10 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('Dashboard');
-Route::get('/admin/reward', [App\Http\Controllers\RewardController::class, 'index'])->name('Reward');
-Route::get('/admin/profil', [App\Http\Controllers\ProfilController::class, 'index'])->name('Profil');
-Route::get('/admin/Registrasi', [App\Http\Controllers\ProfilController::class, 'index'])->name('Registrasi');
+Route::middleware(['login'])->group(function(){
+    Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
+    Route::get('/admin/dashboard', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('Dashboard');
+    Route::get('/admin/reward', [App\Http\Controllers\Admin\RewardController::class, 'index'])->name('Reward');
+    Route::get('/admin/profil', [App\Http\Controllers\Admin\ProfilController::class, 'index'])->name('Profil');
+    Route::get('/admin/Registrasi', [App\Http\Controllers\Admin\RegisterConfirmController::class, 'index'])->name('RegisterConfirm');
+});
 
 

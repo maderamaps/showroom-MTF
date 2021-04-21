@@ -42,8 +42,8 @@ class sideBar extends Component
                 'url'=>'Profil'
             ],
             [
-                'label'=> 'Registrasi',
-                'url'=>'Registrasi'
+                'label'=> 'Register Confirm',
+                'url'=>'RegisterConfirm'
             ]
         ];
     }

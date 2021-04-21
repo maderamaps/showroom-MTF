@@ -63,6 +63,9 @@
                                     </a>
                                 @endif
                             </div>
+                            @if (isset($_GET["message"]))
+                                <div class="w-100 text-center bg-danger text-white font-weight-bold ">{{$_GET["message"]}}</div>
+                            @endif
                         </div>
                     </form>
                 </div>
@@ -71,3 +74,4 @@
     </div>
 </div>
 @endsection
+
