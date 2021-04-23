@@ -30,16 +30,16 @@ Route::middleware(['login'])->group(function(){
     Route::get('/admin/RegistrasiGetDataAll', [App\Http\Controllers\Admin\RegisterConfirmController::class, 'getDataAll'])->name('ApproveRegistrasiGetDataAll');
     Route::post('/admin/RegistrasiConfirm', [App\Http\Controllers\Admin\RegisterConfirmController::class, 'edit'])->name('ApproveRegistrasiConfirm');
     Route::post('/admin/RegistrasiDelete', [App\Http\Controllers\Admin\RegisterConfirmController::class, 'deleteUser'])->name('ApproveRegistrasiDelete');
-<<<<<<< HEAD
 
     Route::get('/admin/ApproveReward', [App\Http\Controllers\Admin\ApproveReward::class, 'index'])->name('ApproveReward');
 
     Route::get('/admin/ListShowroom', [App\Http\Controllers\Admin\ListShowroom::class, 'index'])->name('ListShowroom');
+    Route::get('/admin/ListShowroomGetData', [App\Http\Controllers\Admin\ListShowroom::class, 'getData'])->name('ListShowroomGetData');
+    Route::get('/admin/ListShowroomGetDataAll', [App\Http\Controllers\Admin\ListShowroom::class, 'getDataAll'])->name('ListShowroomGetDataAll');
+    Route::get('/admin/ListShowroomSearch', [App\Http\Controllers\Admin\ListShowroom::class, 'getDataSearch'])->name('ListShowroomSearch');
 
     
 
-=======
->>>>>>> parent of 6cced006... push mid
 });
 
 

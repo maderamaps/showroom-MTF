@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/approveRegistrasi.js": "/js/approveRegistrasi.js",
+    "/js/listShowroom.js": "/js/listShowroom.js",
     "/css/app.css": "/css/app.css",
     "/css/adminStyle.css": "/css/adminStyle.css",
     "/css/sidebar.css": "/css/sidebar.css",
