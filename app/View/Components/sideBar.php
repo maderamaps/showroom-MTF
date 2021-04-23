@@ -34,8 +34,8 @@ class sideBar extends Component
                 'url'=>'Dashboard'
             ],
             [
-                'label'=> 'Approve Reward',
-                'url'=>'ApproveReward'
+                'label'=> 'Reward',
+                'url'=>'Reward'
             ],
             [
                 'label'=> 'Profil',
