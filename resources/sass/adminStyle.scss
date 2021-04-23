@@ -62,3 +62,45 @@ div.dashboard-menu-title {
     color: white;
     font-size: x-large;
   }
+
+.table-users {
+    width: 100%;
+}
+
+.table-users tr {
+    border-bottom: solid 1px;
+}
+
+.table-users td {
+    padding: 10px 0px;
+}
+
+.table-users tr:hover {
+    color: blue;
+}
+
+.fa-check {
+    color: #47AF45;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.fa-times {
+    color: #BC3434;
+    cursor: pointer;
+}
+
+.fa-arrow-alt-circle-right {
+    color: #47AF45;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.table-user {
+    width: 100%;
+}
+
+.table-user img {
+    width: 300px;
+    cursor: pointer;
+}

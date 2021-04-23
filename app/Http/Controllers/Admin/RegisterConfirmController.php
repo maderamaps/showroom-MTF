@@ -3,14 +3,21 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Models\User;
+use App\Models\User;
 
 class RegisterConfirmController extends Controller
 {
     public function index()
     {
         $active = "Register Confirm";
-        return view('admin/home', ['active' => $active]);
+        $User = User::get();
+        return view('admin/approveRegistrasi', ['active' => $active]);
+    }
+
+    public function getDataAll()
+    {
+        $User = User::where('status', '=', 'delay')->get();
+        return json_encode($User);
     }
 
     public function getDataUser(Request $request)
@@ -34,7 +41,7 @@ class RegisterConfirmController extends Controller
     public function deleteUser(Request $request)
     {
         $User = User::findOrFail($request->id);
-        if($aktifitas->delete()){
+        if($User->delete()){
             return json_encode(['success'=>true]);
         }else{
             return json_encode(['success'=>false]);
