@@ -25,6 +25,7 @@
     <link href="{{ asset('css/adminStyle.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome-free-5.15.1-web/css/all.css') }}" rel="stylesheet">
     <link href="{{ asset('css/w3.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/rewardAdmin.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 </head>
