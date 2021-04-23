@@ -44,6 +44,10 @@ class sideBar extends Component
             [
                 'label'=> 'Register Confirm',
                 'url'=>'RegisterConfirm'
+            ],
+            [
+                'label'=> 'List Showroom',
+                'url'=>'ListShowroom'
             ]
         ];
     }

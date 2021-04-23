@@ -2,8 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/approveRegistrasi.js": "/js/approveRegistrasi.js",
     "/css/app.css": "/css/app.css",
-    "/css/rewardAdmin.css": "/css/rewardAdmin.css",
+    "/css/adminStyle.css": "/css/adminStyle.css",
     "/css/sidebar.css": "/css/sidebar.css",
-    "/css/loginRegister.css": "/css/loginRegister.css",
-    "/css/adminStyle.css": "/css/adminStyle.css"
+    "/css/loginRegister.css": "/css/loginRegister.css"
 }
