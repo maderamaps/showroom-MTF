@@ -86,7 +86,7 @@
 
         <main class="py-4">
             <div class="sidebar">
-                <x-sidebar :active="$active"/>
+                <x-admin.sidebar :active="$active"/>
             </div>
             @yield('content')
         </main>

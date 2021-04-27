@@ -64,6 +64,11 @@
                             <td id="cv"></td>
                         </tr>
                         <tr>
+                            <td><label for="ktp">KTP</label></td>
+                            <td>:</td>
+                            <td id="ktp"></td>
+                        </tr>
+                        <tr>
                             <td><label for="reward">reward</label></td>
                             <td>:</td>
                             <td id="reward"></td>

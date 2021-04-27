@@ -48,6 +48,10 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\UserStatus::class,
             \App\Http\Middleware\Authenticate::class,
         ],
+        'admin' => [
+            \App\Http\Middleware\IsAdmin::class,
+            \App\Http\Middleware\Authenticate::class,
+        ],
         
     ];
 

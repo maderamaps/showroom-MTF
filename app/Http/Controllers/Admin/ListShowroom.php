@@ -22,7 +22,7 @@ class ListShowroom extends Controller
 
     public function getDataAll()
     {
-        $User = User::where('status', '=', 'confirmed')->get();
+        $User = User::where('status', '=', 'confirmed')->get(['id','name','email']);
         return json_encode($User);
     }
 
@@ -31,7 +31,7 @@ class ListShowroom extends Controller
         $User = User::where([
                             ['name', 'LIKE', '%'.$request->name.'%'], 
                             ['status', 'LIKE', 'confirmed']
-                            ])->get();
+                            ])->get(['id','name','email']);
         return json_encode($User);
     }
 }

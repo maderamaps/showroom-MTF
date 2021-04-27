@@ -52,8 +52,10 @@ $(document).ready(function () {
         $("#alamat").html(content);
         content = dataResult.updated_at.substr(0, 10);
         $("#tanggal").html(content);
-        content = "<img src='../image/admin/contohCV.jpg' onclick=window.open('../image/admin/contohCV.jpg')>";
+        content = "<img id='imgCv' src='data:image/jpeg;base64," + dataResult.cv + "' onclick=openImageCv()>";
         $("#cv").html(content);
+        content = "<img id='imgKtp' src='data:image/jpeg;base64," + dataResult.ktp + "' onclick=openImageKtp()>";
+        $("#ktp").html(content);
         content = 'Rp.0 <button class="btn btn-primary" style="width: 20%;" onclick="">History</button>';
         $("#reward").html(content);
         var btn = '<button class="btn btn-danger" style="width: 20%" onclick="deleteRegister(' + dataResult.id + ')">Delete</button>';
@@ -62,6 +64,24 @@ $(document).ready(function () {
         $("#close").html(btn);
       }
     });
+  };
+
+  window.openImageCv = function () {
+    var image = new Image();
+    image.style = '-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;';
+    image.src = $('#imgCv').attr('src');
+    image.width = 600;
+    var w = window.open("");
+    w.document.write(image.outerHTML);
+  };
+
+  window.openImageKtp = function () {
+    var image = new Image();
+    image.style = '-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;';
+    image.src = $('#imgKtp').attr('src');
+    image.width = 600;
+    var w = window.open("");
+    w.document.write(image.outerHTML);
   };
 
   window.popUp = function (id) {

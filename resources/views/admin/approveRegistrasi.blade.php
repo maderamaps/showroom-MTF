@@ -59,6 +59,11 @@
                             <td>:</td>
                             <td id="cv"></td>
                         </tr>
+                        <tr>
+                            <td><label for="ktp">KTP</label></td>
+                            <td>:</td>
+                            <td id="ktp"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

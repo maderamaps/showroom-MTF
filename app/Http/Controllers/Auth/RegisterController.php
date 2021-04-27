@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Image;
 
 class RegisterController extends Controller
 {
@@ -53,6 +54,16 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'phone' => ['required', 'string', 'max:255'],
+            'address' => ['required', 'string', 'max:255'],
+            'cv' => ['required','mimes:jpeg,jpg,png','max:1000'],
+            'owner_name' => ['required', 'string', 'max:255'],
+            'owner_email' => ['required', 'string', 'max:255'],
+            'owner_phone' => ['required', 'string', 'max:255'],
+            'owner_address' => ['required', 'string', 'max:255'],
+            'ktp_number' => ['required', 'string', 'max:255'],
+            'owner_ktp' => ['required','mimes:jpeg,jpg,png','max:1000'],
+
         ]);
     }
 
@@ -64,11 +75,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $file = $data['cv'];
+        $imagedata = file_get_contents($file->getRealPath());
+        $base64Cv = base64_encode($imagedata);
+      
+        $file = $data['owner_ktp'];
+        $imagedata = file_get_contents($file->getRealPath());
+        $base64ktp = base64_encode($imagedata);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'status' => 'delay',
             'password' => Hash::make($data['password']),
+            'phone' => $data['phone'],
+            'address' => $data['address'],
+            'cv' =>  $base64Cv,
+            'owner_name' => $data['owner_name'],
+            'owner_email' => $data['owner_email'],
+            'owner_phone' => $data['owner_phone'],
+            'owner_address' => $data['owner_address'],
+            'ktp_number' => $data['ktp_number'],
+            'ktp' =>  $base64ktp,
         ]);
     }
 }

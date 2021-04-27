@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\admin;
 
 use Illuminate\View\Component;
 
@@ -24,7 +24,7 @@ class sideBar extends Component
     public function render()
     {
         $list = $this->list();
-        return view('components.sidebar', ['active' => $this->active]);
+        return view('components.admin.sidebar', ['active' => $this->active]);
     }
 
     public function list(){
@@ -34,12 +34,12 @@ class sideBar extends Component
                 'url'=>'Dashboard'
             ],
             [
-                'label'=> 'Reward',
-                'url'=>'Reward'
+                'label'=> 'Approve Transaksi',
+                'url'=>'ApproveTransaksi'
             ],
             [
-                'label'=> 'Profil',
-                'url'=>'Profil'
+                'label'=> 'Approve Withdraw',
+                'url'=>'ApproveWithdraw'
             ],
             [
                 'label'=> 'Register Confirm',

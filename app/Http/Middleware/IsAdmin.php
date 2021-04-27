@@ -3,10 +3,10 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Auth;
 use Illuminate\Http\Request;
+use Auth;
 
-class UserStatus
+class IsAdmin
 {
     /**
      * Handle an incoming request.
@@ -17,13 +17,9 @@ class UserStatus
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->status == 'confirmed') {
+        if (Auth::check() && Auth::user()->status == 'admin') {
             return $next($request);
-        }elseif(Auth::check() && Auth::user()->status == 'admin') {
-            return redirect('/admin/dashboard');
         }
-        Auth::logout();
-        
-        return redirect('/login?message=Your account not confirm yet, please come back later');
+        return redirect('/dashboard');
     }
 }

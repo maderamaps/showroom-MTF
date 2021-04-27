@@ -1,18 +1,19 @@
 @extends('layouts.auth')
 
 @section('content')
+<div class="row justify-content-center">
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-
+    
+        <div class="col-md-12">
+            <div class="card login-card">
+                <div class="backgroundLogin"></div>
+                <div class="imgText1Login"></div>
+                <div class="imgText2Login"></div>
                 <div class="card-body">
-                    <div class="title">MTF Showroom</div>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form id="fromLogin" class="col-md-5 float-right" method="POST" action="{{ route('login') }}">
                         @csrf
-
+                        <div class="title">Sign In</div>
                         <div class="form-group row">
-                            <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror itemInput" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -20,11 +21,9 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror itemInput" name="password" placeholder="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -32,11 +31,9 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -44,7 +41,6 @@
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
-                            </div>
                         </div>
 
                         <div class="form-group row">

@@ -51,8 +51,10 @@ $(document).ready(function () {
         $("#telp").html(content);
         content = dataResult.created_at.substr(0, 10);
         $("#tanggal").html(content);
-        content = "<img src='../image/admin/contohCV.jpg' onclick=window.open('../image/admin/contohCV.jpg')>";
+        content = "<img id='imgCv' src='data:image/jpeg;base64," + dataResult.cv + "' onclick=openImageCv()>";
         $("#cv").html(content);
+        content = "<img id='imgKtp' src='data:image/jpeg;base64," + dataResult.ktp + "' onclick=openImageKtp()>";
+        $("#ktp").html(content);
         var btn = '<button class="btn btn-success" style="width: 20%;" onclick="confirmRegister(' + dataResult.id + ')">Confirmasi</button>';
         $("#confirm").html(btn);
         btn = '<button class="btn btn-danger" style="width: 20%" onclick="deleteRegister(' + dataResult.id + ')">Delete</button>';
@@ -82,7 +84,6 @@ $(document).ready(function () {
         id: id
       },
       success: function success(dataResult) {
-        console.log("success");
         popUpClose();
         getData();
       }
@@ -101,7 +102,6 @@ $(document).ready(function () {
           id: id
         },
         success: function success(dataResult) {
-          console.log("success");
           popUpClose();
           getData();
         }

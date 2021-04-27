@@ -3,12 +3,56 @@ body{
     background-color: #ffffff;
 }
 
+// login
+#fromLogin{
+    margin-left: 30px;
+    right: 50px;
+}
+
+.login-card {
+    margin-bottom: 200px;
+    border: solid 1px;
+}
+
+.backgroundLogin {
+    position: absolute;
+    width: 58%;
+    // width: 615px;
+    height: 106%;
+    left: -10%;
+    top: -6%;
+    background: url(/image/background-login.png);
+    // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.imgText1Login {
+    width: 391px;
+    height: 40px;
+    left: 10%;
+    top: 11%;
+    position: absolute;
+    background: url(/image/Collect-Your-Reward.png);
+    z-index: 2;
+}
+
+.imgText2Login {
+    width: 331px;
+    height: 230px;
+    left: 14%;
+    top: 30%;
+    position: absolute;
+    background: url(/image/undraw_wallet_aym5.png);
+    z-index: 2;
+}
+
+// registrasi
 .background {
     position: absolute;
-    width: 80%;
+    width: 50%;
     // width: 615px;
     height: 104%;
-    left: 400px;
+    left: 50%;
     top: -4%;
     background: url(/image/background-login2.png);
     // box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -18,7 +62,7 @@ body{
 .imgText1 {
     width: 200px;
     height: 40px;
-    left: 63%;
+    left: 57%;
     top: 10%;
     position: absolute;
     background: url(/image/join-now.png);
@@ -28,7 +72,7 @@ body{
 .imgText2 {
     width: 257px;
     height: 40px;
-    left: 80%;
+    left: 70%;
     top: 20%;
     position: absolute;
     background: url(/image/and-get-Reward.png);
@@ -38,7 +82,7 @@ body{
 .imgText3 {
     width: 500px;
     height: 350px;
-    left: 60%;
+    left: 55%;
     top: 30%;
     position: absolute;
     background: url(/image/registerimg.png);
@@ -50,7 +94,7 @@ body{
     border: 1px solid rgba(31, 60, 120, 1);
 }
 
-form{
+#fromRegistrasi{
     margin-right: 30px;
     left: 50px;
 }
