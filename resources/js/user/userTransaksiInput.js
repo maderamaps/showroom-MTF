@@ -26,17 +26,26 @@ $(document).ready(function() {
             },
             cache: false,
             success: function(dataResult){
+                $( "#alert" ).removeClass( "alert alert-danger alert alert-success" )
                 $( "#alert" ).addClass( "alert alert-success" );
                 var content = "";
                 content += "<strong>Success!</strong> Input transaksi berhasil dan akan diproses.";
                 $("#alert").html(content)
+                $('input[id=noTransaksi]').val("");
+                $('input[id=nominal]').val("");
+                $('input[id=namaCustomer]').val("");
+                $('input[id=noTelp]').val("");
+                $('input[id=email]').val("");
+                $('#alamatCustomer').val("");
             },
             error: function (request, error) {
+                $( "#alert" ).removeClass( "alert alert-danger alert alert-success" )
                 $( "#alert" ).addClass( "alert alert-danger" );
                 var content = "";
-                content += "<strong>Danger!</strong> "+error;
+                content += "<strong>Error!</strong> "+request.responseJSON.message;
                 $("#alert").html(content)
                 console.log(arguments);
+                
             }
             
         });
