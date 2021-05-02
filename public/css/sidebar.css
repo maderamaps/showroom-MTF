@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #1F3C78;
+  background-color: #1f3c78;
   overflow-x: hidden;
   padding-top: 60px;
   z-index: 1;
@@ -24,7 +24,7 @@
 }
 
 .sidebar a:hover {
-  color: #DBAA56;
+  color: #dbaa56;
   font-size: 18px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .menu.active {
-  background-color: #FACC07;
+  background-color: #facc07;
 }
 
 .sidebar .fas {

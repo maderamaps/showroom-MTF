@@ -1,6 +1,5 @@
-
 .logo {
-  width: 90px;
+    width: 90px;
 }
 .sidebar {
     height: 100%;
@@ -8,34 +7,34 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #1F3C78;
+    background-color: #1f3c78;
     overflow-x: hidden;
     padding-top: 60px;
     z-index: 1;
-  }
-  
-  .sidebar a {
+}
+
+.sidebar a {
     padding: 7px 8px 7px 16px;
     text-decoration: none;
     font-size: 16px;
     color: #ffffff;
     display: block;
     width: 100%;
-  }
-  
-  .sidebar a:hover {
-    color: #DBAA56;
+}
+
+.sidebar a:hover {
+    color: #dbaa56;
     font-size: 18px;
-  }
+}
 
-  .sidebar h3 {
+.sidebar h3 {
     padding: 6px 8px 6px 16px;
-  }
+}
 
-  .menu.active{
-    background-color: #FACC07;
-  } 
+.menu.active {
+    background-color: #facc07;
+}
 
-  .sidebar .fas{
+.sidebar .fas {
     font-size: 20px;
-  }
+}
