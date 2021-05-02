@@ -4,13 +4,13 @@
 .sidebar {
     height: 100%;
     width: 225px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background-color: #1f3c78;
     overflow-x: hidden;
     padding-top: 60px;
-    z-index: 1;
+    // z-index: 1;
 }
 
 .sidebar a {
@@ -37,4 +37,10 @@
 
 .sidebar .fas {
     font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .sidebar {
+        display: none;
+    }
 }
