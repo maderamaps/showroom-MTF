@@ -13,4 +13,8 @@ class Pelanggan extends Model
     protected $fillable = ['file'];
     public $timestamps = true;
     
+    public function Transaksi()
+    {
+        return $this->belongsTo(Transaksi::Class, 'id_transaksi');
+    }
 }

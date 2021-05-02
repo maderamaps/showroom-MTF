@@ -5,6 +5,7 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Transaksi;
+use App\Models\Pelanggan;
 use Auth;
 use Carbon\Carbon;
 
@@ -24,16 +25,31 @@ class UserTransaksi extends Controller
         $alamatCustomer = $request->input('alamatCustomer');
 
         if ($noTransaksi != '' && $nominal != '' && $namaCustomer != '' && $noTelp != '' && $email != '' && $alamatCustomer != '') {
-            $dataPelanggan = array('name' => $namaCustomer, "phone" => $noTelp, "email" => $email, "address" => $alamatCustomer);
-            // $pelanggan = pelanggan::insert($dataPelanggan);
             
-            $dataTransaksi = array("id_user" => 24, "id_pelanggan" => 1, "no_transaksi" => $noTransaksi, "status" => "delay", "nominal" => $nominal);
+            $dataTransaksi = array("id_user" => 24, "no_transaksi" => $noTransaksi, "status" => "delay", "nominal" => $nominal);
             $transaksi = new Transaksi;
-            $transaksi = Transaksi::insert($dataTransaksi);
-            $pelanggan = $transaksi->Pelanggan()->create($dataPelanggan);
-
-            //It will automatically fills the user_id in the xyz table. //last code here
-
+            $transaksi->id_user = Auth::user()->id;
+            $transaksi->no_transaksi = $noTransaksi;
+            $transaksi->status = "delay";
+            $transaksi->nominal = $nominal;
+            if ($transaksi->save()) {
+                if($transaksi->no_transaksi==$noTransaksi){
+                    $pelanggan = new Pelanggan;
+                    $pelanggan->name = $namaCustomer;
+                    $pelanggan->id_transaksi = $transaksi->id;
+                    $pelanggan->phone = $noTelp;
+                    $pelanggan->email = $email;
+                    $pelanggan->address = $alamatCustomer;
+                    $pelanggan->save();
+                    echo json_encode(['success' => true]);
+                }else{
+                    Transaksi::deleteData($transaksi->id);
+                    echo json_encode(['success' => false]);
+                }
+                
+            }else{
+                echo json_encode(['success' => false]);
+            }
 
             // $value = Aktifitas::insert($data);
             // if ($value) {
@@ -42,7 +58,8 @@ class UserTransaksi extends Controller
             //     echo json_encode(['success' => false]);
             // }
         } else {
-            echo 'Fill all fields.';
+            return response()->json([
+                'message' => 'Fill all fields'], 404);
         }
 
         exit;
