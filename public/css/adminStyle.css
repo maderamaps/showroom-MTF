@@ -5,9 +5,9 @@ body {
 .card {
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 30px;
 }
 
 .card-body {
@@ -143,6 +143,18 @@ div.dashboard-menu-title {
 .content-table tbody tr:hover {
   font-weight: bold;
   color: #1f3c78;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(#ebd781, #facc07);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 
