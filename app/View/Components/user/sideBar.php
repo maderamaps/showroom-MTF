@@ -31,20 +31,18 @@ class sideBar extends Component
         return[
             [
                 'label'=> 'Dashboard',
+                'icon' => 'fas fa-home',
                 'url'=>'DashboardUser'
             ],
             // [
             //     'label'=> 'Profil',
             //     'url'=>'Profil'
             // ],
-            // [
-            //     'label'=> 'Transaksi',
-            //     'url'=>'Transaksi'
-            // ],
-            // [
-            //     'label'=> 'Reward',
-            //     'url'=>'Reward'
-            // ],
+            [
+                'label'=> 'Transaksi',
+                'icon' => 'fas fa-cash-register',
+                // 'url'=>'TransaksiUser'
+            ],
             // [
             //     'label'=> 'Customer',
             //     'url'=>'Customer'

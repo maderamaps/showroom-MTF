@@ -22,9 +22,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/adminStyle.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/userDashboard.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome-free-5.15.1-web/css/all.css') }}" rel="stylesheet">
     <link href="{{ asset('css/w3.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/barChart.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 </head>
@@ -33,7 +34,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img class="logo" src="image/logo_mtf.png">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -92,4 +93,26 @@
         </main>
     </div>
 </body>
+<footer>
+    <div>
+        Mandiri Tunas Finance
+    </div>
+</footer>
 </html>
+<script>
+    var toggleTransaksi = false;
+      window.sidebarDropdown = function(value){
+        if(value='Transaksi'){
+            if(toggleTransaksi==false){
+                $( "#ts1" ).show("slow");
+                $( "#ts2" ).show("slow");
+                toggleTransaksi = !toggleTransaksi;
+            }else{
+                $( "#ts1" ).hide("slow");
+                $( "#ts2" ).hide("slow");
+                toggleTransaksi = !toggleTransaksi;
+
+            }
+        }
+      }
+</script>

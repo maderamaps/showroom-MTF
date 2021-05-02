@@ -1,20 +1,24 @@
+
+.logo {
+  width: 90px;
+}
 .sidebar {
     height: 100%;
-    width: 207px;
+    width: 225px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #EEEEEE;
+    background-color: #1F3C78;
     overflow-x: hidden;
     padding-top: 60px;
-    z-index: 0;
+    z-index: 1;
   }
   
   .sidebar a {
-    padding: 6px 8px 6px 16px;
+    padding: 7px 8px 7px 16px;
     text-decoration: none;
     font-size: 16px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     width: 100%;
   }
@@ -29,5 +33,9 @@
   }
 
   .menu.active{
-    background-color: #CCCCCC;
-}
+    background-color: #FACC07;
+  } 
+
+  .sidebar .fas{
+    font-size: 20px;
+  }

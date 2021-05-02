@@ -53,6 +53,18 @@ Route::middleware(['admin'])->group(function(){
 
 Route::middleware(['login'])->group(function(){
     Route::get('/dashboard', [App\Http\Controllers\User\Dashboard::class, 'index'])->name('DashboardUser');
+    Route::get('/TransaksiUserChart', [App\Http\Controllers\User\UserTransaksi::class, 'chart'])->name('TransaksiUserChart');
+    Route::get('/TransaksiUserRecent', [App\Http\Controllers\User\UserTransaksi::class, 'recent'])->name('TransaksiUserRecent');
+    Route::get('/RewardUserRecent', [App\Http\Controllers\User\UserReward::class, 'recent'])->name('RewardUserRecent');
+    Route::get('/RewardUserRecentWithdraw', [App\Http\Controllers\User\UserReward::class, 'recentWithdraw'])->name('RewardUserRecentWithdraw');
+
+    Route::get('/TransaksiUser', [App\Http\Controllers\User\UserTransaksi::class, 'index'])->name('TransaksiUser');
+    Route::get('/TransaksiUserInput', [App\Http\Controllers\User\UserTransaksi::class, 'index'])->name('TransaksiUserInput');
+    Route::post('/TransaksiUserInputSubmit', [App\Http\Controllers\User\UserTransaksi::class, 'store'])->name('TransaksiUserInputSubmit');
+    Route::get('/TransaksiUserHistory', [App\Http\Controllers\User\UserTransaksi::class, 'show'])->name('TransaksiUserHistory');
+
+    
+
 });
 
 

@@ -11,9 +11,13 @@ class Transaksi extends Model
 
     protected $table = 'transaksi';
     protected $fillable = ['file'];
-    public $timestamps = false;
+    public $timestamps = true;
     public function User()
     {
         return $this->belongsTo(User::Class, 'id_user');
+    }
+    public function Pelanggan()
+    {
+        return $this->belongsTo(Pelanggan::Class, 'id_pelanggan');
     }
 }
