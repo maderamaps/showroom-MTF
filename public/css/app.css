@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
 
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -10941,6 +10940,59 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.cont-screen {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.img-fluid {
+  height: 50px;
+  width: 120px;
+}
+
+.cont-nav-profile {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+.bingkai-img {
+  display: flex;
+  background-color: #1F3C78;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  margin: 0px 0px;
+}
+
+.cont-dis-profile {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px;
+}
+
+.cont-dis-profile .cont-name {
+  height: 17;
+  padding: 0px 7px;
+}
+
+.name {
+  font-size: 18px;
+  display: block;
+  height: 100%;
+  color: black;
+  font-weight: bold;
+}
+
+.cont-nav-profile .bingkai-img .img-fluid {
+  height: 30px;
+  width: 30px;
 }
 
 

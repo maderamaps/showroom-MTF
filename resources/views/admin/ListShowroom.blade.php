@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                     <input class="searchListShowroom" id="search" type="search" placeholder="Search...">
-                    <table class="table-users">
+                    <table class="table-users content-table">
                             <thead>
                                 <tr>
                                     <th>Nama</th>
@@ -24,6 +24,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
 {{-- Pop Up --}}

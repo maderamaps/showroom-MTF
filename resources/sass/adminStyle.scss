@@ -1,14 +1,25 @@
-body{
+body {
     font-family: Roboto;
 }
 
 .card {
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    // background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
 }
 
 .card-body {
     display: flex;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 500px;
+    }
 }
 
 div.dashboard-menu {
@@ -29,8 +40,8 @@ div.dashboard-menu:hover {
 .break {
     flex-basis: 100%;
     height: 0;
-  }
-    
+}
+
 div.dashboard-menu-gambar {
     width: 110px;
     height: 110px;
@@ -61,37 +72,37 @@ div.dashboard-menu-title {
     background-color: red;
     color: white;
     font-size: x-large;
-  }
+}
 
 .table-users {
     width: 100%;
 }
 
-.table-users tr {
-    border-bottom: solid 1px;
-}
+// .table-users tr {
+//     border-bottom: solid 1px;
+// }
 
-.table-users td {
-    padding: 10px 0px;
-}
+// .table-users td {
+//     padding: 10px 0px;
+// }
 
-.table-users tr:hover {
-    color: blue;
-}
+// .table-users tr:hover {
+//     color: blue;
+// }
 
 .fa-check {
-    color: #47AF45;
+    color: #47af45;
     cursor: pointer;
     margin-right: 20px;
 }
 
 .fa-times {
-    color: #BC3434;
+    color: #bc3434;
     cursor: pointer;
 }
 
 .fa-arrow-alt-circle-right {
-    color: #47AF45;
+    color: #47af45;
     cursor: pointer;
     font-size: 20px;
 }
@@ -105,6 +116,46 @@ div.dashboard-menu-title {
     cursor: pointer;
 }
 
-.searchListShowroom{
+.searchListShowroom {
     margin-bottom: 10px;
+}
+
+// custom table admin
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.content-table thead tr {
+    background-color: #1e4188;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #facc07;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: #1f3c78;
+}
+
+.content-table tbody tr:hover {
+    font-weight: bold;
+    color: #1f3c78;
 }

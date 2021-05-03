@@ -8,7 +8,7 @@
                 <div class="card-header">Approve Registrasi</div>
 
                 <div class="card-body">
-                   <table class="table-users">
+                   <table class="table-users content-table">
                         <thead>
                             <tr>
                                 <th>Nama</th>
