@@ -24,7 +24,7 @@
             <th scope="row">1</th>
             <td>Made Rama PS</td>
             <td>20/04/2021</td>
-            <td>198</td>
+            <td>200</td>
             <td>
               <button type="button" class="btn"><i class="fa fa-check"></i></button>
             <button type="button" class="btn "><i class="fa fa-times" aria-hidden="true"></i></button>
