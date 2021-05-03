@@ -3,14 +3,12 @@
 }
 .sidebar {
     height: 100%;
-    width: 225px;
-    position: absolute;
+    width: 275px;
     top: 0;
     left: 0;
     background-color: #1f3c78;
     overflow-x: hidden;
-    padding-top: 60px;
-    // z-index: 1;
+    border-top-right-radius: 20px;
 }
 
 .sidebar a {
@@ -37,18 +35,4 @@
 
 .sidebar .fas {
     font-size: 20px;
-}
-
-@media screen and (max-width: 1000px) {
-    .sidebar {
-        display: none;
-    }
-}
-
-.content {
-    background-color: #ededed;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
 }

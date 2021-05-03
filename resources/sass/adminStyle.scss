@@ -159,17 +159,3 @@ div.dashboard-menu-title {
     font-weight: bold;
     color: #1f3c78;
 }
-
-// circle
-
-.circle::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 80%;
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(#ebd781, #facc07);
-    border-radius: 50%;
-    z-index: 0;
-}
