@@ -1,0 +1,105 @@
+body{
+    background-color: #ffffff !important;
+}
+
+.container{
+    padding: 0% !important;
+    margin-top:0px !important;
+    margin: 0px !important;
+}
+
+.box{
+    position: relative;
+    padding: 0em 2em;
+    border: solid 1px #ffffff;
+    width: 94%;
+    left: 19%;
+    background: url(/image/background-reward.png);
+    display: block;
+}
+
+.box-body{
+    padding: 0em 2em;
+}
+
+.box2{
+    position: relative;
+    padding: 0em 2em;
+    border: none 1px;
+    width: 94%;
+    left: 19%;
+    background: url(/image/background-reward2.png);
+
+}
+
+.box2-body{
+    padding: 0em 2em;
+}  
+
+.point .title{
+    font-size: 25px !important;
+    color: #1F3C78;
+
+}
+
+.point{
+    margin-bottom: 100px;
+}
+
+.point .point{
+    font-size: 25px !important;
+    color: #1F3C78;
+}
+
+.point .btn-success{
+    padding: 2px;
+    font-size: 20px !important;
+    vertical-align: middle;
+}
+
+.chart{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.date{
+    margin-left: 0px;
+}
+
+.datepicker {
+    border: none;
+    // text-align: right;
+    width: 170px;
+}
+
+.table-recentReward th{
+    font-size: 16px !important;
+}
+
+.table-recentReward td{
+    font-size: 14px !important;
+}
+
+.table-recentReward p {
+    font-weight: bold;
+}
+
+
+
+
+
+.card {
+    position: absolute;
+    width: 40%;
+    // background-color: aqua;
+    // float: right;
+    left: 8%;
+    top: 10%;
+    margin-top:0px !important;
+
+}
+
+.card-body {
+    width: 40%;
+
+}

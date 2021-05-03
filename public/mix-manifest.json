@@ -7,11 +7,16 @@
     "/js/listShowroom.js": "/js/listShowroom.js",
     "/js/userDashboard.js": "/js/userDashboard.js",
     "/js/userTransaksiInput.js": "/js/userTransaksiInput.js",
+    "/js/userReward.js": "/js/userReward.js",
+    "/js/userTransaksiHistory.js": "/js/userTransaksiHistory.js",
     "/css/app.css": "/css/app.css",
     "/css/userDashboard.css": "/css/userDashboard.css",
     "/css/sidebar.css": "/css/sidebar.css",
     "/css/loginRegister.css": "/css/loginRegister.css",
     "/css/barChart.css": "/css/barChart.css",
+    "/css/userRewardChart.css": "/css/userRewardChart.css",
+    "/css/userReward.css": "/css/userReward.css",
+    "/css/userHistoryTransaksi.css": "/css/userHistoryTransaksi.css",
     "/css/userInputTransaksi.css": "/css/userInputTransaksi.css",
     "/css/adminStyle.css": "/css/adminStyle.css"
 }

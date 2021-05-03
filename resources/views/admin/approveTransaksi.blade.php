@@ -14,6 +14,7 @@
                                 <tr>
                                     <th>No Transaksi</th>
                                     <th>Showroom</th>
+                                    <th>Nominal</th>
                                     <th>Tanggal</th>
                                     <th>Action</th>
                                 </tr>

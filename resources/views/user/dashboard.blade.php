@@ -1,4 +1,5 @@
 @extends('layouts.user.app')
+<link href="{{ asset('css/barChart.css') }}" rel="stylesheet">
 
 @section('content')
 <div class="container">
