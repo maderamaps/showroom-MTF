@@ -84,7 +84,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="cont-screen">
             <div class="sidebar">
                 <x-user.sidebar :active="$active"/>
             </div>

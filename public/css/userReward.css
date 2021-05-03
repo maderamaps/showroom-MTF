@@ -13,7 +13,6 @@ body {
   padding: 0em 2em;
   border: solid 1px #ffffff;
   width: 94%;
-  left: 19%;
   background: url(/image/background-reward.png);
   display: block;
 }
@@ -27,7 +26,6 @@ body {
   padding: 0em 2em;
   border: none 1px;
   width: 94%;
-  left: 19%;
   background: url(/image/background-reward2.png);
 }
 
