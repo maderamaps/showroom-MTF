@@ -62,6 +62,10 @@ Route::middleware(['login'])->group(function(){
     Route::get('/TransaksiUserInput', [App\Http\Controllers\User\UserTransaksi::class, 'index'])->name('TransaksiUserInput');
     Route::post('/TransaksiUserInputSubmit', [App\Http\Controllers\User\UserTransaksi::class, 'store'])->name('TransaksiUserInputSubmit');
     Route::get('/TransaksiUserHistory', [App\Http\Controllers\User\UserTransaksi::class, 'show'])->name('TransaksiUserHistory');
+    Route::get('/TransaksiUserSearch', [App\Http\Controllers\User\UserTransaksi::class, 'search'])->name('TransaksiUserSearch');
+
+    Route::get('/RewardUser', [App\Http\Controllers\User\UserReward::class, 'index'])->name('RewardUser');
+    Route::get('/RewardUserGetAll', [App\Http\Controllers\User\UserReward::class, 'getAll'])->name('RewardUserGetAll');
 
     
 

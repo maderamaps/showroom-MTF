@@ -1,0 +1,69 @@
+.container {
+    width: 100% !important;
+}
+
+.card-body {
+    padding: 10px 10px !important;
+}
+
+table {
+    width: 100%;
+    font-size: 12px;
+    table-layout: fixed;
+    border-bottom: 1px solid rgba(31, 60, 120, 1);
+
+}
+
+table th {
+    background-color: #1F3C78;
+    color: #ffffff;
+    padding: 5px 10px;
+    
+}
+
+table tr {
+    border-left: 1px solid rgba(31, 60, 120, 1);
+    border-right: 1px solid rgba(31, 60, 120, 1);
+}
+
+table tr.firstRow {
+    border: none !important;
+}
+
+table td {
+    padding: 5px 5px;
+}
+
+.firstCol{
+    border-top-left-radius: 20px;
+}
+
+.lastCol{
+    border-top-right-radius: 20px;
+
+}
+
+.search-container {
+    float: right;
+  }
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-right: 16px;
+    background: #ffffff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    // border: 1px solid #ccc;  
+
+  }
+  
+.search-container button:hover {
+    background: #ccc;
+  }
+
+input[type=search] {
+    border-radius: 10px;
+    border-color: #1F3C78;
+  }

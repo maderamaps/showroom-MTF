@@ -16,6 +16,7 @@ $(document).ready(function() {
                     content += "<tr class='clickable-row' data-href='url://'>"
                     content += "<td>"+ dataResult[i].no_transaksi +"</td>"
                     content += "<td>"+ dataResult[i].user['name'] +"</td>"
+                    content += "<td>"+ dataResult[i].nominal +"</td>"
                     content += "<td>"+ dataResult[i].created_at.substr(0,10) +"</td>"
                     content += "<td><i class='fas fa-check' style='margin-right:20px; font-size:25px;' onclick='confirmData("+dataResult[i].id+");'></i><i class='fas fa-times' style=' font-size:25px;' onclick='deleteData("+dataResult[i].id+");'></i></td>"
                     content += "</tr>"

@@ -16,8 +16,5 @@ class Transaksi extends Model
     {
         return $this->belongsTo(User::Class, 'id_user');
     }
-    public function Pelanggan()
-    {
-        return $this->belongsTo(Pelanggan::Class, 'id_pelanggan');
-    }
+  
 }

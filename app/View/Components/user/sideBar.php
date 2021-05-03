@@ -43,10 +43,11 @@ class sideBar extends Component
                 'icon' => 'fas fa-cash-register',
                 // 'url'=>'TransaksiUser'
             ],
-            // [
-            //     'label'=> 'Customer',
-            //     'url'=>'Customer'
-            // ]
+            [
+                'label'=> 'Reward',
+                'icon' => 'fas fa-coins',
+                'url'=>'RewardUser'
+            ]
         ];
     }
 }

@@ -1,10 +1,20 @@
 var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 
+
+jQuery(document).ready(function($) {
+    $('.datepicker').datepicker({
+        format: "yyyy",
+        viewMode: "years", 
+        minViewMode: "years"
+    });
+
+    var d = new Date();
+    var n = d.getFullYear();
+    $('.datepicker').val(n);
+});
 $(document).ready(function() {
     transaksiChart();
-    recentTransaksi();
-    recentReward();
-    recentWithdraw()
+
     function transaksiChart(){
         $.ajax({
             url:"TransaksiUserChart",
@@ -72,34 +82,7 @@ $(document).ready(function() {
         })
     }
 
-    function recentTransaksi(){
-        $.ajax({
-            url:"TransaksiUserRecent",
-            type: "get",
-            dataType: "json",
-            data: {
-                _token: CSRF_TOKEN
-            },
-            success: function(dataResult){
-                var content = "";
-                for(i=0;i<dataResult.length;i++){
-                    content += "<tr class='clickable-row' data-href='url://'>"
-                    content += "<td>"+ dataResult[i].name +"</td>"
-                    content += "<td>"+ dataResult[i].no_transaksi +"</td>"
-                    content += "<td>"+ dataResult[i].created_at.substr(0,10) +"</td>"
-                    content += "<td>"+ 'Rp.'+formatMoney(dataResult[i].nominal) +"</td>"
-                    if(dataResult[i].status=='confirmed'){
-                        content += "<td style='color:#47AF45;font-weight:bold'>"+ dataResult[i].status +"</td>"
-                    }
-                    
-                    content += "</tr>"
-                }
-                $(".table-recentTransaksi tbody").html(content)
-            }
-        })
-    }
-
-    function recentReward(){
+    function RewardGetAll(){
         $.ajax({
             url:"RewardUserRecent",
             type: "get",
@@ -124,48 +107,4 @@ $(document).ready(function() {
             }
         })
     }
-
-    function recentWithdraw(){
-        $.ajax({
-            url:"RewardUserRecentWithdraw",
-            type: "get",
-            dataType: "json",
-            data: {
-                _token: CSRF_TOKEN
-            },
-            success: function(dataResult){
-                var content = "";
-                const monthNames = ["","Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-                                    ];
-                for(i=0;i<dataResult.length;i++){
-                    content += "<tr>"
-                    content += "<td class='ellipsis'>"+ dataResult[i].name +"</td>"
-                    content += "<td>"+ dataResult[i].nominal +" Points</td>"
-                    content += "<td>"+ dataResult[i].created_at.substr(8,2)+"-"+monthNames[Number(dataResult[i].created_at.substr(5,2))] +"</td>" 
-                    content += "</tr>"
-                    console.log(Number(dataResult[i].created_at.substr(5,2)))
-                }
-                $(".table-recentWithdraw tbody").html(content)
-            }
-        })
-    }
-
-    function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
-        try {
-          decimalCount = Math.abs(decimalCount);
-          decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-      
-          const negativeSign = amount < 0 ? "-" : "";
-      
-          let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-          let j = (i.length > 3) ? i.length % 3 : 0;
-      
-          return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-        } catch (e) {
-          console.log(e)
-        }
-      };
-
-      
 });
