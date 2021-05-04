@@ -31,22 +31,27 @@ class sideBar extends Component
         return[
             [
                 'label'=> 'Dashboard',
+                'icon' => 'fas fa-home',
                 'url'=>'Dashboard'
             ],
             [
                 'label'=> 'Approve Transaksi',
+                'icon' => 'fas fa-thumbs-up',
                 'url'=>'ApproveTransaksi'
             ],
             [
                 'label'=> 'Approve Withdraw',
+                'icon' => 'fas fa-gifts',
                 'url'=>'ApproveWithdraw'
             ],
             [
                 'label'=> 'Register Confirm',
+                'icon' => 'fas fa-id-card',
                 'url'=>'RegisterConfirm'
             ],
             [
                 'label'=> 'List Showroom',
+                'icon' => 'fas fa-store',
                 'url'=>'ListShowroom'
             ]
         ];

@@ -3,6 +3,7 @@
 }
 
 .sidebar {
+  margin-top: 5px;
   height: 100%;
   width: 275px;
   top: 0;
@@ -13,17 +14,32 @@
 }
 
 .sidebar a {
+  display: flex;
+  align-items: center;
   padding: 7px 8px 7px 16px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #ffffff;
   display: block;
   width: 100%;
+  height: 60px;
+}
+
+.sidebar a .cont-b {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.sidebar a .cont-b i {
+  margin-right: 15px;
 }
 
 .sidebar a:hover {
   color: #dbaa56;
-  font-size: 18px;
+  font-size: 16px;
+  background-color: #ffffff;
 }
 
 .sidebar h3 {
