@@ -1,23 +1,60 @@
+.container h2{
+    margin: 20px 10px;
+
+}
+
+.cont-content-dashboard{
+    // border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px 0px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cont-img-intro{
+    height: 250px;
+    width: 100%;
+    // border: 1px solid black;
+}
+
+.cont-img-intro img{
+    height: 100%;
+    width: 400px;
+    // border: 1px solid black;
+}
+
 .card-body{
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 20px;
     flex-direction: row;
     width: 100%;
-    border: 1px solid black;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    // background-color: white;
 }
 
 .card-body .dashboard-item{
+    // margin-top: 20px;
+    // margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    border: 1px solid black;
+    height: 350px;
     width: 100%;
     border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
 }
 
 .card-body .dashboard-item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    // border: 1px solid black;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -25,4 +62,35 @@
 .card-body .dashboard-item a img{
     height: 200px;
     width: 150px;
+}
+
+.card-body .dashboard-item a .badge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border-radius: 100%;
+    // margin-bottom: 300px;
+    // margin-left: 200px;
+    // margin-left: 500;
+    // margin-left: 200px;
+    position:relative;
+    // border: 1px solid black;
+}
+
+.card-body .dashboard-item a .badge p{
+    color: white;
+    // border: 1px solid black;
+    // height: 100%;
+    // width: 100%;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-body .dashboard-item:hover{
+    background-color:#E2E8F5;
+    opacity: 0.5;
 }
