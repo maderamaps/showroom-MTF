@@ -3,33 +3,45 @@
 
 @section('content')
 <div class="container">
-    <h3>Dashboard</h2>
-    <div class="card-body">
-        <div class="dashboard-item">
-            <a href="">
-                <img src="../image/Confirmed2.svg" alt="">
-                <p>Approve Transaksi</p>
-            </a>
+    <h2>Dashboard</h2>
+    <div class="cont-content-dashboard">
+        <div class="cont-img-intro">
+            <img src="../image/Hello-pana.svg" alt="">
+            <p></p>
         </div>
-        <div class="dashboard-item">
-            <a href="">
-                <img src="../image/send_gift.svg" alt="">
-                <p>Approve Withdraw</p>
-            </a>
-        </div>
-        <div class="dashboard-item">
-            <a href="">
-                <img src="../image/Confirmation.svg" alt="">
-                <p>Register Confirm</p>
-            </a>
-        </div>
-        <div class="dashboard-item">
-            <a href="">
-                <img src="../image/Vehicle_sale.svg" alt="">
-                <p>Approve Transaksi</p>
-            </a>
+        <div class="card-body">
+            <div class="dashboard-item">
+                <a href="">
+                    <span class="badge"> <p>3</p></span>
+                    <img src="../image/Confirmed2.svg" alt="">
+                    <p>Approve Transaksi</p>
+                </a>
+            </div>
+            <div class="dashboard-item">
+                <a href="">
+                    <span class="badge"><p>3</p></span>
+                    <img src="../image/send_gift.svg" alt="">
+                    <p>Approve Withdraw</p>
+                </a>
+            </div>
+            <div class="dashboard-item">
+                <a href="">
+                    <span class="badge"><p>3</p></span>
+                    <img src="../image/Confirmation.svg" alt="">
+                    <p>Register Confirm</p>
+                </a>
+            </div>
+            <div class="dashboard-item">
+                <a href="">
+                    <span class="badge"><p>3</p></span>
+                    <img src="../image/Vehicle_sale.svg" alt="">
+                    <p>Approve Transaksi</p>
+                </a>
+            </div>
         </div>
     </div>
+    
+</div>
     <!-- <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
