@@ -3,13 +3,14 @@
 }
 
 .sidebar {
+  display: inline-block;
   margin-top: 5px;
   height: 100%;
-  width: 275px;
+  width: 18%;
   top: 0;
   left: 0;
   background-color: #1f3c78;
-  overflow-x: hidden;
+  overflow: auto;
   border-top-right-radius: 20px;
 }
 

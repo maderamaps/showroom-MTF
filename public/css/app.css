@@ -10949,6 +10949,21 @@ a.text-dark:focus {
   height: 100%;
 }
 
+.cont-screen .sidebar {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 18%;
+}
+
+.cont-screen .content {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 82%;
+  overflow: auto;
+}
+
 .img-fluid {
   height: 50px;
   width: 110px;

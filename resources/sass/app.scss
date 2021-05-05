@@ -11,7 +11,22 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    // border: 1px solid black;
+}
+
+.cont-screen .sidebar{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 18%;
+    // overflow: hidden;
+}
+
+.cont-screen .content{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 82%;
+    overflow: auto;
 }
   
 .img-fluid{
