@@ -46,16 +46,16 @@
 .card-body input,
 .card-body textarea {
   width: 100%;
-  border-radius: 10px;
-  border-color: #1F3C78;
-  border: solid 2px;
+  border-radius: 5px;
+  border-color: #8f8989;
+  border: solid 1px #1f3c78;
   box-shadow: none;
   outline: none;
 }
 
 .card-body button {
   border-radius: 10px;
-  background-color: #1F3C78;
+  background-color: #1f3c78;
   color: #ffffff;
   font-weight: bold;
   padding: 5px 40px;
