@@ -15,7 +15,12 @@ $(document).ready(function () {
       $("#lastLink").before('<li class="page-item .bg-success"><a class="page-link bg-primary text-white" href="TransaksiUserHistory?page=' + currentPage + '">' + currentPage + '</a></li>');
     }
 
-    totalBtn = Math.floor(total / 20) + 1; // totalBtn=20;
+    if (total % 20 == 0) {
+      //mendapatkan jumlah page
+      totalBtn = Math.floor(total / 20);
+    } else {
+      totalBtn = Math.floor(total / 20) + 1;
+    }
 
     for (i = currentPage; i < totalBtn; i++) {
       j = i + 1;

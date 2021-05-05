@@ -10,8 +10,8 @@
         <h2>Reward</h2>
         <div class="box-body">
             <div class="point">
-                <span class="title">My Points :</span> <span class="point">3000</span>
-                <button type="button" class="btn btn-success">Withdraw</button>
+                <span class="title">My Points :</span> <span id="point" class="point">{{$point}}</span>
+                <button type="button" class="btn btn-success" onclick="popUp()">Withdraw</button>
             </div>
             <div class="date">
                 <i class="fas fa-sort-down"><input type="text" id="datepicker" class="datepicker"></i>
@@ -96,32 +96,76 @@
                         </tr>
                      </thead>
                     <tbody>
-                        @foreach ($reward as $reward)
+                        @foreach ($reward as $rwd)
                             <tr>
-                                <td>{{$reward->no_transaksi}}</td>
-                                <td>{{$reward->name}}</td>
-                                <td>{{$reward->nominal}}</td>
-                                <td>@if($reward->status=="reward") <p class="text-success">Reward</p> @endif 
-                                    @if($reward->status=="withdraw") <p class="text-warning">In Process Witdraw</p> @endif
-                                    @if($reward->status=="withdraw confirmed") <p class="text-danger">Withdraw</p> @endif
+                                <td>{{$rwd->no_transaksi}}</td>
+                                <td>{{$rwd->name}}</td>
+                                <td>{{$rwd->nominal}}</td>
+                                <td>@if($rwd->status=="reward") <p class="text-success">Reward</p> @endif 
+                                    @if($rwd->status=="withdraw") <p class="text-warning">In Process Witdraw</p> @endif
+                                    @if($rwd->status=="withdraw confirmed") <p class="text-danger">Withdraw</p> @endif
                                 </td>
-                                <td>{{substr($reward->created_at,0,10)}}</td>
+                                <td>{{substr($rwd->created_at,0,10)}}</td>
                             </tr>
                         @endforeach
                     </tbody>
-                    <tfoot>
-                            <td class="seeAll" colspan="3">See All &#8594</td>
-                    </tfoot>
                 </table>
+                <div class="link">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                          <li id="firstLink" class="page-item">
+                            <a class="page-link" href="{{$reward->previousPageUrl()}}" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="{{$reward->url(1)}}">1</a></li>
+                          {{-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li> --}}
+                          <li id="lastLink" class="page-item">
+                            <a class="page-link" href="{{$reward->nextPageUrl()}}" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <p>page {{$reward->currentPage()}} from {{$reward->lastPage()}}</p>
+                   </div>
             </div>
         </div>
     </div>
 </div>
 
+{{-- Pop Up --}}
+<div class="w3-container">  
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="" >
+            <div class="w3-container w3-padding justify-content-center">
+                <h2>Withdraw</h2>
+                <div class="point">
+                    <span class="title">My Points :</span> <span class="point">{{$point}}</span>      
+                    <input id="inputWithdraw" type="number">
+                </div>
+                <button id="submit" class="btn btn-success">Withdraw</button>
+            </div>
+        
+            <div class="w3-container w3-padding" id="action">
+                <button class="w3-button w3-right w3-white" onclick="popUpClose();" style="font-size: 20px;"><i class="far fa-times-circle fa-1x"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- ----- --}}
+
+
 @endsection
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
-
-
 <script src="../js/userReward.js"></script>
+<script>
+    $(document).ready(function() {
+        links({{$reward->currentPage()}},{{$reward->total()}},'{{Request::url()}}')
+    });
+</script>
