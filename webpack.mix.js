@@ -31,4 +31,5 @@ mix.js('resources/js/user/userTransaksiHistory.js', 'public/js')
     .sass('resources/sass/userHistoryTransaksi.scss', 'public/css')
     .sass('resources/sass/userReward.scss', 'public/css')
     .sass('resources/sass/userRewardChart.scss', 'public/css')
+    .sass('resources/sass/userProfile.scss', 'public/css')
     .sass('resources/sass/barChart.scss', 'public/css');

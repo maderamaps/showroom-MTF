@@ -11,12 +11,13 @@
     "/js/userTransaksiHistory.js": "/js/userTransaksiHistory.js",
     "/css/app.css": "/css/app.css",
     "/css/userDashboard.css": "/css/userDashboard.css",
+    "/css/sidebar.css": "/css/sidebar.css",
     "/css/loginRegister.css": "/css/loginRegister.css",
     "/css/barChart.css": "/css/barChart.css",
+    "/css/userProfile.css": "/css/userProfile.css",
     "/css/userRewardChart.css": "/css/userRewardChart.css",
     "/css/userReward.css": "/css/userReward.css",
     "/css/userHistoryTransaksi.css": "/css/userHistoryTransaksi.css",
     "/css/userInputTransaksi.css": "/css/userInputTransaksi.css",
-    "/css/adminStyle.css": "/css/adminStyle.css",
-    "/css/sidebar.css": "/css/sidebar.css"
+    "/css/adminStyle.css": "/css/adminStyle.css"
 }

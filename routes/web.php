@@ -67,6 +67,7 @@ Route::middleware(['login'])->group(function(){
     Route::get('/RewardUser', [App\Http\Controllers\User\UserReward::class, 'index'])->name('RewardUser');
     Route::get('/RewardUserGetAll', [App\Http\Controllers\User\UserReward::class, 'getAll'])->name('RewardUserGetAll');
 
+    Route::get('/ProfileUser', [App\Http\Controllers\User\UserProfile::class, 'index'])->name('ProfileUser');
     
 
 });
