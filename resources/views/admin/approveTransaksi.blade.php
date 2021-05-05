@@ -50,6 +50,39 @@
                             <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
                         </td>
                     </tr>
+                    <tr>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>
+                            <a href="" class="btn btn-primary"><i class="fas fa-info"> </i></a>
+                            <a href="" class="btn btn-success"><i class="fas fa-user-check"></i></a>
+                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>
+                            <a href="" class="btn btn-primary"><i class="fas fa-info"> </i></a>
+                            <a href="" class="btn btn-success"><i class="fas fa-user-check"></i></a>
+                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>No Transaksi</td>
+                        <td>
+                            <a href="" class="btn btn-primary"><i class="fas fa-info"> </i></a>
+                            <a href="" class="btn btn-success"><i class="fas fa-user-check"></i></a>
+                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i></a>
+                        </td>
+                    </tr>
                 </tbody>
 
             </table>
