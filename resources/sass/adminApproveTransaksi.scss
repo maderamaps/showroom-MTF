@@ -1,0 +1,59 @@
+.container h2{
+    margin: 20px 10px;
+    color:black;
+    font-weight: bold;
+}
+
+.cont-table{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+
+.cont-table input{
+    padding: 5px 15px;
+    align-self: flex-end;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.cont-table table{
+    // border: 1px solid black;
+    width: 100%;
+    // border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cont-table table thead tr{
+    // border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #FACC07;
+    
+}
+
+.cont-table table thead tr th{
+    // border: 1px solid black;
+    text-align: left;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.cont-table table tbody tr {
+    // border: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 50px;
+}
+.cont-table table tbody tr td{
+    padding: 5px 10px;
+}
+
+
