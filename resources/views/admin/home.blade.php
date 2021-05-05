@@ -1,8 +1,35 @@
 @extends('layouts.admin.app')
+<link rel="stylesheet" href="{{asset('css/adminDashboard.css')}}">
 
 @section('content')
 <div class="container">
     <h3>Dashboard</h2>
+    <div class="card-body">
+        <div class="dashboard-item">
+            <a href="">
+                <img src="../image/Confirmed2.svg" alt="">
+                <p>Approve Transaksi</p>
+            </a>
+        </div>
+        <div class="dashboard-item">
+            <a href="">
+                <img src="../image/send_gift.svg" alt="">
+                <p>Approve Withdraw</p>
+            </a>
+        </div>
+        <div class="dashboard-item">
+            <a href="">
+                <img src="../image/Confirmation.svg" alt="">
+                <p>Register Confirm</p>
+            </a>
+        </div>
+        <div class="dashboard-item">
+            <a href="">
+                <img src="../image/Vehicle_sale.svg" alt="">
+                <p>Approve Transaksi</p>
+            </a>
+        </div>
+    </div>
     <!-- <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">

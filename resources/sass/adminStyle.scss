@@ -2,19 +2,19 @@ body {
     font-family: Roboto;
 }
 
-.card {
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    // background: rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    margin-top: 30px;
-}
+// .card {
+//     // box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+//     // border-radius: 10px;
+//     // // background: rgba(255, 255, 255, 0.1);
+//     // border-top: 1px solid rgba(255, 255, 255, 0.5);
+//     // border-left: 1px solid rgba(255, 255, 255, 0.5);
+//     // margin-top: 30px;
+// }
 
-.card-body {
-    display: flex;
-    flex-wrap: wrap;
-}
+// .card-body {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
 
 @media screen and (max-width: 1000px) {
     .card {

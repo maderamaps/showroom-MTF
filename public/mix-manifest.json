@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/loginRegister.js": "/js/loginRegister.js",
+    "/js/adminDashboard.js": "/js/adminDashboard.js",
     "/js/approveRegistrasi.js": "/js/approveRegistrasi.js",
     "/js/approveTransaksi.js": "/js/approveTransaksi.js",
     "/js/approveWithdraw.js": "/js/approveWithdraw.js",
@@ -13,6 +14,7 @@
     "/css/userDashboard.css": "/css/userDashboard.css",
     "/css/sidebar.css": "/css/sidebar.css",
     "/css/loginRegister.css": "/css/loginRegister.css",
+    "/css/adminDashboard.css": "/css/adminDashboard.css",
     "/css/barChart.css": "/css/barChart.css",
     "/css/userProfile.css": "/css/userProfile.css",
     "/css/userRewardChart.css": "/css/userRewardChart.css",

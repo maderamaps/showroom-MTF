@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/loginRegister.js', 'public/js')
+mix.js('resources/js/admin/adminDashboard.js', 'public/js')
 mix.js('resources/js/admin/approveRegistrasi.js', 'public/js')
 mix.js('resources/js/admin/approveTransaksi.js', 'public/js')
 mix.js('resources/js/admin/approveWithdraw.js', 'public/js')
@@ -32,4 +33,5 @@ mix.js('resources/js/user/userTransaksiHistory.js', 'public/js')
     .sass('resources/sass/userReward.scss', 'public/css')
     .sass('resources/sass/userRewardChart.scss', 'public/css')
     .sass('resources/sass/userProfile.scss', 'public/css')
-    .sass('resources/sass/barChart.scss', 'public/css');
+    .sass('resources/sass/barChart.scss', 'public/css')
+    .sass('resources/sass/adminDashboard.scss', 'public/css')
