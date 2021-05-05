@@ -15,11 +15,13 @@ class UserReward extends Controller
                         ->join('transaksi', 'transaksi.id', '=', 'reward.id_transaksi')
                         ->where('transaksi.id_user',  Auth::user()->id)
                         ->orderBy('created_at','desc')
-                        ->paginate(20);
+                        ->paginate(10);
 
+        $point = Auth::user()->point;
         $active = "Reward";
         return view('user/reward', ['active' => $active,
-                                    'reward' => $reward]);
+                                    'reward' => $reward,
+                                    'point' => $point]);
     }
 
     public function getAll(){

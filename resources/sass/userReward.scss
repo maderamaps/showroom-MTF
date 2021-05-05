@@ -6,13 +6,14 @@ body{
     padding: 0% !important;
     margin-top:0px !important;
     margin: 0px !important;
+    padding-bottom: 50px;
 }
 
 .box{
     position: relative;
     padding: 0em 2em;
     border: solid 1px #ffffff;
-    width: 94%;
+    width: 100%;
     // left: 19%;
     background: url(/image/background-reward.png);
     display: block;
@@ -26,10 +27,9 @@ body{
     position: relative;
     padding: 0em 2em;
     border: none 1px;
-    width: 94%;
+    width: 100%;
     // left: 19%;
     background: url(/image/background-reward2.png);
-
 }
 
 .box2-body{
@@ -102,4 +102,9 @@ body{
 .card-body {
     width: 40%;
 
+}
+
+.w3-modal-content{
+    width: 400px !important;
+    text-align: center;
 }

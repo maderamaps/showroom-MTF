@@ -114,6 +114,51 @@ $(document).ready(function () {
       }
     });
   }
+
+  window.links = function (currentPage, total, url) {
+    var content = "";
+    var temp = currentPage - 2;
+
+    if (currentPage == 2) {
+      $("#lastLink").before('<li class="page-item .bg-success"><a class="page-link bg-primary text-white" href="' + url + '?page=' + currentPage + '">' + currentPage + '</a></li>');
+    } else if (currentPage > 2) {
+      $("#lastLink").before('<li class="page-item"><a class="page-link" href="' + url + '?page=' + temp + '">...</a></li>');
+      $("#lastLink").before('<li class="page-item .bg-success"><a class="page-link bg-primary text-white" href=' + url + '"?page=' + currentPage + '">' + currentPage + '</a></li>');
+    }
+
+    if (total % 10 == 0) {
+      //mendapatkan jumlah page
+      totalBtn = Math.floor(total / 10);
+    } else {
+      totalBtn = Math.floor(total / 10) + 1;
+    }
+
+    for (i = currentPage; i < totalBtn; i++) {
+      j = i + 1;
+
+      if (i < currentPage + 1) {
+        $("#lastLink").before('<li class="page-item"><a class="page-link" href="' + url + '?page=' + j + '">' + j + '</a></li>');
+      } else if (i < totalBtn - 1) {} else {
+        $("#lastLink").before('<li class="page-item"><a class="page-link" href="' + url + '?page=' + totalBtn + '">...</a></li>');
+      }
+    }
+
+    console.log(totalBtn);
+  };
+
+  window.popUp = function () {
+    document.getElementById('id01').style.display = 'block';
+  };
+
+  window.popUpClose = function () {
+    document.getElementById('id01').style.display = 'none';
+  };
+
+  $("#submit").click(function () {
+    if (Number($("#point").text()) < $("#inputWithdraw").val()) {
+      alert("Point Tidak Cukup");
+    }
+  });
 });
 /******/ })()
 ;
