@@ -68,6 +68,9 @@ Route::middleware(['login'])->group(function(){
     Route::get('/RewardUserGetAll', [App\Http\Controllers\User\UserReward::class, 'getAll'])->name('RewardUserGetAll');
 
     Route::get('/ProfileUser', [App\Http\Controllers\User\UserProfile::class, 'index'])->name('ProfileUser');
+    Route::get('/ProfileUserGet', [App\Http\Controllers\User\UserProfile::class, 'show'])->name('ProfileUserGet');
+    Route::post('/ProfileUserUpdate', [App\Http\Controllers\User\UserProfile::class, 'update'])->name('ProfileUserUpdate');
+    Route::post('/ProfileUserUpdateAvatar', [App\Http\Controllers\User\UserProfile::class, 'updateAvatar'])->name('ProfileUserUpdateAvatar');
     
 
 });

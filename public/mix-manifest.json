@@ -9,6 +9,7 @@
     "/js/userTransaksiInput.js": "/js/userTransaksiInput.js",
     "/js/userReward.js": "/js/userReward.js",
     "/js/userTransaksiHistory.js": "/js/userTransaksiHistory.js",
+    "/js/userProfile.js": "/js/userProfile.js",
     "/css/app.css": "/css/app.css",
     "/css/userDashboard.css": "/css/userDashboard.css",
     "/css/sidebar.css": "/css/sidebar.css",

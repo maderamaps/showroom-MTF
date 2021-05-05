@@ -88,7 +88,9 @@
             <div class="sidebar">
                 <x-user.sidebar :active="$active"/>
             </div>
-            @yield('content')
+            <div class="content">
+                @yield('content')
+            </div>
         </main>
     </div>
 </body>
