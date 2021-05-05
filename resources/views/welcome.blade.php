@@ -50,12 +50,12 @@
             </div>
         </div>
     </nav>
-    <div>
-        <div class="row">
-            <div class="col-md-5">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4">
                 <h1>Selamat Datang di Showroom MTF</h1>    
             </div>
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <img src="../image/welcome.svg" alt="" >
             </div>
         </div>
