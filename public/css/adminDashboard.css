@@ -1,0 +1,30 @@
+.card-body {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 20px;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-body .dashboard-item {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-body .dashboard-item a {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body .dashboard-item a img {
+  height: 200px;
+  width: 150px;
+}
+
+
