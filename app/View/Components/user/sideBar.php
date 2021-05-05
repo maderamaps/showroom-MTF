@@ -47,6 +47,11 @@ class sideBar extends Component
                 'label'=> 'Reward',
                 'icon' => 'fas fa-coins',
                 'url'=>'RewardUser'
+            ],
+            [
+                'label'=> 'Profile',
+                'icon' => 'fas fa-coins',
+                'url'=>'ProfileUser'
             ]
         ];
     }

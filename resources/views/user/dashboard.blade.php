@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         {{-- <div class="col-md-2"></div> --}}
-        <div class="col-md-7">
+        <div class="col-md-8">
             <div class="opening">Hello, Showroom {{ Auth::user()->name }}</div>
             <span class="opening">Welcome Back</span>
 
@@ -100,7 +100,7 @@
                             <tbody>
                             </tbody>
                             <tfoot>
-                                    <td class="seeAll" colspan="3">See All &#8594</td>
+                                    <td class="seeAll" colspan="3"><a href="{{route('RewardUser')}}">See All &#8594</a></td>
                             </tfoot>
                         </table>
                     </div>
@@ -114,7 +114,7 @@
                             <tbody>
                             </tbody>
                             <tfoot>
-                                    <td class="seeAll" colspan="3">See All &#8594</td>
+                                   <td class="seeAll" colspan="3"><a href="{{route('RewardUser')}}">See All &#8594</a></td>
                             </tfoot>
                         </table>
                     </div>
@@ -124,9 +124,9 @@
     </div>
     <div class="row justify-content-center">
         {{-- <div class="col-md-2"></div> --}}
-        <div class="col-md-7">
+        <div class="col-md-8">
             <div class="card recentTransaksi">
-                <div class="card-header">Transaksi Terakhir <a class="seeAll float-right">See All &#8594</a></div>
+                <div class="card-header">Transaksi Terakhir <a class="seeAll float-right" href="{{route('TransaksiUserHistory')}}">See All &#8594</a></div>
                 <div class="card-body">
                     <table class="table-recentTransaksi">
                         <thead>
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-3" style="z-index:-10"></div>
     </div>
 </div>
 
