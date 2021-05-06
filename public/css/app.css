@@ -11014,4 +11014,29 @@ a.text-dark:focus {
   width: 20px;
 }
 
+.navbar .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 10px;
+  padding: 2px;
+  background-color: red;
+  border-radius: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 4px;
+}
+
+.navbar .badge p {
+  color: white;
+  font-size: 20px;
+  text-align: right;
+}
+
+.notification {
+  cursor: pointer;
+  color: #1F3C78;
+}
+
 

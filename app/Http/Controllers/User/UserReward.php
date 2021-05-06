@@ -5,6 +5,8 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Reward;
+use App\Models\User;
+use App\Models\Transaksi;
 use Auth;
 
 
@@ -24,8 +26,36 @@ class UserReward extends Controller
                                     'point' => $point]);
     }
 
-    public function getAll(){
+    // public function getAll(){
         
+    // }
+
+    public function withdraw(Request $request){
+        try {
+            if(Auth::user()->point >= $request->inputWithdraw){
+                $transaksi = Transaksi::select('id')
+                        ->where("id_user", Auth::user()->id)
+                        ->take(1)
+                        ->get();
+
+                $reward = new Reward;
+                $reward->id_transaksi = $transaksi[0]->id;
+                $reward->nominal = $request->inputWithdraw;
+                $reward->status = "withdraw";
+                if ($reward->save()) {
+                    $point= floatval(Auth::user()->point) - floatval($request->inputWithdraw);
+                    $user = User::where('id',Auth::user()->id)
+                        ->update(['point' => $point]);
+                    return redirect()->route('RewardUser');
+                }
+                return redirect()->route('RewardUser'); 
+            }else{
+                return redirect()->route('RewardUser');
+            }
+            
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->route('RewardUser');
+        }
     }
 
     public function recent(){

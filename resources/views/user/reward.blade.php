@@ -14,7 +14,7 @@
                 <button type="button" class="btn btn-success" onclick="popUp()">Withdraw</button>
             </div>
             <div class="date">
-                <i class="fas fa-sort-down"><input type="text" id="datepicker" class="datepicker"></i>
+                <i class="fas fa-sort-down"><input type="text" id="datepicker" class="datepicker" ></i>
             </div>
             <div class="chart row justify-content-center">
                 <table id="q-graph">
@@ -90,7 +90,7 @@
                         <tr>
                             <th>No Transaksi</th>
                             <th>Nama Pelanggan</th>
-                            <th>Nominal</th>
+                            <th>Point</th>
                             <th>Status</th>
                             <th>Tanggal</th>
                         </tr>
@@ -98,11 +98,11 @@
                     <tbody>
                         @foreach ($reward as $rwd)
                             <tr>
-                                <td>{{$rwd->no_transaksi}}</td>
-                                <td>{{$rwd->name}}</td>
+                                <td>@if($rwd->status=="reward") {{$rwd->no_transaksi}} @else  @endif </td>
+                                <td>@if($rwd->status=="reward") {{$rwd->name}} @else  @endif </td>
                                 <td>{{$rwd->nominal}}</td>
                                 <td>@if($rwd->status=="reward") <p class="text-success">Reward</p> @endif 
-                                    @if($rwd->status=="withdraw") <p class="text-warning">In Process Witdraw</p> @endif
+                                    @if($rwd->status=="withdraw") <p class="text-info">Witdraw In Process</p> @endif
                                     @if($rwd->status=="withdraw confirmed") <p class="text-danger">Withdraw</p> @endif
                                 </td>
                                 <td>{{substr($rwd->created_at,0,10)}}</td>
@@ -142,12 +142,15 @@
     <div id="id01" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="" >
             <div class="w3-container w3-padding justify-content-center">
+                <form id="formWithdraw"  method="POST" action="{{ route('RewardUserWithdraw') }}">
+                @csrf
                 <h2>Withdraw</h2>
                 <div class="point">
                     <span class="title">My Points :</span> <span class="point">{{$point}}</span>      
-                    <input id="inputWithdraw" type="number">
+                    <input id="inputWithdraw" name="inputWithdraw" type="number" step="any" required>
                 </div>
-                <button id="submit" class="btn btn-success">Withdraw</button>
+                <span id="submit" class="btn btn-success">Withdraw</span>
+                </form>
             </div>
         
             <div class="w3-container w3-padding" id="action">

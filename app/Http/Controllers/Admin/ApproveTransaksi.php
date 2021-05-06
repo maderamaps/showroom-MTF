@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Transaksi;
+use App\Models\User;
 
 class ApproveTransaksi extends Controller
 {
@@ -25,6 +26,10 @@ class ApproveTransaksi extends Controller
         $Transaksi = Transaksi::find($request->id);
         $Transaksi->status= 'confirmed';
         if($Transaksi->save()){
+            $user = User::find($request->id_user);
+            $user->point = (floatval($Transaksi->nominal) * 1/100) + floatval($user->point);
+            $user->save();
+
             return json_encode(['success'=>true]);
         }else{
             return json_encode(['success'=>false]);

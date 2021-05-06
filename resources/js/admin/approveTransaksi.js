@@ -18,7 +18,7 @@ $(document).ready(function() {
                     content += "<td>"+ dataResult[i].user['name'] +"</td>"
                     content += "<td>"+ dataResult[i].nominal +"</td>"
                     content += "<td>"+ dataResult[i].created_at.substr(0,10) +"</td>"
-                    content += "<td><i class='fas fa-check' style='margin-right:20px; font-size:25px;' onclick='confirmData("+dataResult[i].id+");'></i><i class='fas fa-times' style=' font-size:25px;' onclick='deleteData("+dataResult[i].id+");'></i></td>"
+                    content += "<td><i class='fas fa-check' style='margin-right:20px; font-size:25px;' onclick='confirmData("+dataResult[i].id+","+dataResult[i].user['id']+");'></i><i class='fas fa-times' style=' font-size:25px;' onclick='deleteData("+dataResult[i].id+");'></i></td>"
                     content += "</tr>"
                 }
                 $(".table-users tbody").html(content)
@@ -26,7 +26,7 @@ $(document).ready(function() {
         })
     }
 
-    window.confirmData = function(id){
+    window.confirmData = function(id,id_user){
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
             url:"ApproveTransaksiConfirm",
@@ -35,6 +35,8 @@ $(document).ready(function() {
             data: {
                 _token: CSRF_TOKEN,
                 id : id,
+                id_user : id_user,
+
             },
             success: function(dataResult){
                 getData();

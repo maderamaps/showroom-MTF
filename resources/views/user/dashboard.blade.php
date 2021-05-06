@@ -86,7 +86,7 @@
                                 <td><span class="title">My Points</span></td>
                             </tr>
                             <tr>
-                                <td><span class="number">15000000</span></td>
+                                <td><span class="number">{{auth::user()->point}}</span></td>
                             </tr>
                         </table>
                     </div>

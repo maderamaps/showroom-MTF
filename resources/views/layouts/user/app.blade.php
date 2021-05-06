@@ -62,6 +62,22 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <span id="badge" class="badge"></span>
+                                    <i class="fas fa-bell notification" style="font-size: 20px; vertical-align: bottom; margin-right: 10px"
+                                        onclick="document.getElementById('badge').style.display = 'none'"></i>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a>
+                                        transaksi
+                                    </a>
+
+                                </div>
+                                
+                            
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>

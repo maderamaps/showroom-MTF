@@ -65,7 +65,8 @@ Route::middleware(['login'])->group(function(){
     Route::get('/TransaksiUserSearch', [App\Http\Controllers\User\UserTransaksi::class, 'search'])->name('TransaksiUserSearch');
 
     Route::get('/RewardUser', [App\Http\Controllers\User\UserReward::class, 'index'])->name('RewardUser');
-    Route::get('/RewardUserGetAll', [App\Http\Controllers\User\UserReward::class, 'getAll'])->name('RewardUserGetAll');
+    // Route::get('/RewardUserGetAll', [App\Http\Controllers\User\UserReward::class, 'getAll'])->name('RewardUserGetAll');
+    Route::post('/RewardUserWithdraw', [App\Http\Controllers\User\UserReward::class, 'withdraw'])->name('RewardUserWithdraw');
 
     Route::get('/ProfileUser', [App\Http\Controllers\User\UserProfile::class, 'index'])->name('ProfileUser');
     Route::get('/ProfileUserGet', [App\Http\Controllers\User\UserProfile::class, 'show'])->name('ProfileUserGet');
