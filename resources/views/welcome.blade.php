@@ -8,6 +8,12 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+        <!-- assets -->
+
+        <link href="{{ asset('css/dashboardUtama.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -20,8 +26,49 @@
             }
         </style>
     </head>
+   
+
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+    <div class="bg">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #1F3C78;">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mandiri Tunas Finance</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url('/home') }}" class="nav-link">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <h1>Selamat Datang di Showroom MTF</h1>    
+            </div>
+            <div class="col-md-8">
+                <img src="../image/welcome.svg" alt="" >
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+        <!-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -127,6 +174,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </body>
 </html>

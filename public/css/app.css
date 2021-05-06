@@ -10947,7 +10947,6 @@ a.text-dark:focus {
   display: flex;
   flex-direction: row;
   height: 100%;
-  background-color: #EDEDED;
   background: linear-gradient(#E2E8F5, #FEE67E46);
 }
 

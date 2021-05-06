@@ -7,7 +7,10 @@
     <div class="cont-content-dashboard">
         <div class="cont-img-intro">
             <img src="../image/Hello-pana.svg" alt="">
-            <p></p>
+            <div class="cont-intro">
+                <p>Welcome Back, {{ Auth::user()->name }}</p>
+                <p>Enjoy Your Work</p>
+            </div>
         </div>
         <div class="card-body">
             <div class="dashboard-item">
