@@ -105,6 +105,10 @@
     // border: 1px solid black;
 }
 
+.card-body .dashboard-item a .badge:empty {
+    display: none;
+}
+
 .card-body .dashboard-item a .badge p{
     color: white;
     // border: 1px solid black;

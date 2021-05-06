@@ -32,11 +32,11 @@ class ApproveTransaksi implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return ['my-channel'];
+        return ['transaksi-channel'];
     }
 
     public function broadcastAs()
     {
-        return 'my-event';
+        return 'transaksi-event';
     }
 }

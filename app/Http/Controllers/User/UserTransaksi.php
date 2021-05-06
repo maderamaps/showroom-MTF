@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Transaksi;
 use App\Models\Pelanggan;
+use App\Events\ApproveTransaksi;
 use Auth;
 use Carbon\Carbon;
 
@@ -43,6 +44,7 @@ class UserTransaksi extends Controller
             $transaksi->email = $email;
             $transaksi->address = $alamatCustomer;
             if ($transaksi->save()) {
+                event(new ApproveTransaksi('broadcast'));
                 echo json_encode(['success' => true]);
             }else{
                 return response()->json([

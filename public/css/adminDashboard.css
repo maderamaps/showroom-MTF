@@ -89,6 +89,10 @@
   position: relative;
 }
 
+.card-body .dashboard-item a .badge:empty {
+  display: none;
+}
+
 .card-body .dashboard-item a .badge p {
   color: white;
   font-size: 20px;
