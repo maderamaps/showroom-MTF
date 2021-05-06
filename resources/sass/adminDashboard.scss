@@ -103,6 +103,11 @@
     // margin-left: 200px;
     position:relative;
     // border: 1px solid black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
 }
 
 .card-body .dashboard-item a .badge:empty {
@@ -111,13 +116,13 @@
 
 .card-body .dashboard-item a .badge p{
     color: white;
-    // border: 1px solid black;
-    // height: 100%;
-    // width: 100%;
     font-size: 20px;
     text-align: center;
     margin-top: 15px;
     text-decoration: none;
+    // border: 1px solid black;
+    // height: 100%;
+    // width: 100%;
 }
 
 .card-body .dashboard-item a p{

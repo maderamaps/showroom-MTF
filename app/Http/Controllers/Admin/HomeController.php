@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Transaksi;
+
 
 class HomeController extends Controller
 {
@@ -25,5 +27,10 @@ class HomeController extends Controller
     {
         $active = "Dashboard";
         return view('admin/home', ['active' => $active]);
+    }
+
+    public function notificationTransaksi(){
+        $transaksi = transaksi::where('notification', '=', null)->count();
+        return json_encode($transaksi);
     }
 }

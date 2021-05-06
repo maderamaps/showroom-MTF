@@ -25,6 +25,7 @@ class ApproveTransaksi extends Controller
     {
         $Transaksi = Transaksi::find($request->id);
         $Transaksi->status= 'confirmed';
+        $Transaksi->notification= 'read';
         if($Transaksi->save()){
             $user = User::find($request->id_user);
             $user->point = (floatval($Transaksi->nominal) * 1/100) + floatval($user->point);
@@ -40,7 +41,8 @@ class ApproveTransaksi extends Controller
     public function delete(Request $request)
     {
         $Transaksi = Transaksi::findOrFail($request->id);
-        if($Transaksi->delete()){
+        $Transaksi->status= 'decline';
+        if( $Transaksi->save()){
             return json_encode(['success'=>true]);
         }else{
             return json_encode(['success'=>false]);

@@ -87,6 +87,11 @@
   background-color: red;
   border-radius: 100%;
   position: relative;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
 }
 
 .card-body .dashboard-item a .badge:empty {

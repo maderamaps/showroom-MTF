@@ -80,23 +80,9 @@
 @endsection
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
 <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
-<script type="text/javascript">
-    var i = 0;
+<script src="../js/adminDashboard.js"></script>
 
 
-    var pusher = new Pusher('74fa22daacdba854af99', {
-    cluster: 'ap1'
-  });
-
-    // Subscribe to the channel we specified in our Laravel Event
-    var channel = pusher.subscribe('transaksi-channel');
-
-    // Bind a function to a Event (the full Laravel class)
-    channel.bind('transaksi-event', function(data) {
-      i += 1;
-      document.getElementById("transaksiBadge").innerHTML = "<p>"+i+"</p>";
-    });
-  </script>
 
     <script>
         $( document ).ready(function() {

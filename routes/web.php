@@ -22,6 +22,7 @@ Auth::routes();
 Route::middleware(['admin'])->group(function(){
     Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
     Route::get('/admin/dashboard', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('Dashboard');
+    Route::get('/admin/notificationTransaksi', [App\Http\Controllers\Admin\HomeController::class, 'notificationTransaksi'])->name('notificationTransaksi');
     Route::get('/admin/reward', [App\Http\Controllers\Admin\RewardController::class, 'index'])->name('Reward');
     Route::get('/admin/profil', [App\Http\Controllers\Admin\ProfilController::class, 'index'])->name('Profil');
 

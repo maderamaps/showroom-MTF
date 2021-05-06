@@ -42,7 +42,7 @@
                                     <td>{{$trs->nominal}}</td>
                                     <td> @if($trs->status=="confirmed") <p class="text-success">Accepted</p> @endif 
                                          @if($trs->status=="delay") <p class="text-warning">In Process</p> @endif
-                                         @if($trs->status=="refuse") <p class="text-danger">Refuse</p> @endif
+                                         @if($trs->status=="decline") <p class="text-danger">Decline</p> @endif
                                     </td>
                                 </tr>
                                 @endforeach
