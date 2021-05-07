@@ -12,9 +12,10 @@
     "/js/userTransaksiHistory.js": "/js/userTransaksiHistory.js",
     "/js/userProfile.js": "/js/userProfile.js",
     "/css/app.css": "/css/app.css",
-    "/css/adminStyle.css": "/css/adminStyle.css",
-    "/css/adminDashboard.css": "/css/adminDashboard.css",
+    "/css/adminApproveReward.css": "/css/adminApproveReward.css",
     "/css/adminApproveTransaksi.css": "/css/adminApproveTransaksi.css",
+    "/css/adminListShowroom.css": "/css/adminListShowroom.css",
+    "/css/adminApproveRegistrasi.css": "/css/adminApproveRegistrasi.css",
     "/css/userRewardChart.css": "/css/userRewardChart.css",
     "/css/userReward.css": "/css/userReward.css",
     "/css/userProfile.css": "/css/userProfile.css",
@@ -24,5 +25,8 @@
     "/css/sidebar.css": "/css/sidebar.css",
     "/css/loginRegister.css": "/css/loginRegister.css",
     "/css/dashboardUtama.css": "/css/dashboardUtama.css",
-    "/css/barChart.css": "/css/barChart.css"
+    "/css/barChart.css": "/css/barChart.css",
+    "/css/adminStyle.css": "/css/adminStyle.css",
+    "/css/adminDashboard.css": "/css/adminDashboard.css",
+    "/css/adminApproveWithdraw.css": "/css/adminApproveWithdraw.css"
 }

@@ -15,7 +15,7 @@
         <div class="card-body">
             <div class="dashboard-item">
                 <a href="">
-                    <span class="badge" id="transaksiBadge"></span>
+                    <span class="badge" id="transaksiBadge"><p>3</p></span>
                     <img src="../image/Confirmed2.svg" alt="">
                     <p>Approve Transaksi</p>
                 </a>
