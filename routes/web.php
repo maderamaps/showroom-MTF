@@ -20,7 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::middleware(['admin'])->group(function(){
-    // Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\Admin\RegisterConfirmController::class, 'index'])->name('home');
     Route::get('/admin/dashboard', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('Dashboard');
     Route::get('/admin/notificationTransaksi', [App\Http\Controllers\Admin\HomeController::class, 'notificationTransaksi'])->name('notificationTransaksi');
     Route::get('/admin/notificationWithdraw', [App\Http\Controllers\Admin\HomeController::class, 'notificationWithdraw'])->name('notificationWithdraw');
