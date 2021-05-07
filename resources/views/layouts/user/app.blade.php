@@ -69,7 +69,7 @@
                                         onclick="document.getElementById('badge').style.display = 'none'"></i>
                                 </a>
 
-                                <div id="notification" class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                                <div id="notification" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     {{-- <a class="dropdown-item">
                                         transaksi (13011111) disetujui
                                     </a>

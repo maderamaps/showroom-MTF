@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Transaksi;
+use App\Models\Reward;
 use App\Models\User;
 
 class ApproveTransaksi extends Controller
@@ -23,14 +24,23 @@ class ApproveTransaksi extends Controller
 
     public function edit(Request $request)
     {
+        //mengganti status menjadi confirmed
         $Transaksi = Transaksi::find($request->id);
         $Transaksi->status= 'confirmed';
         $Transaksi->notification= 'write';
         if($Transaksi->save()){
-            $user = User::find($request->id_user);
-            $user->point = (floatval($Transaksi->nominal) * 1/100) + floatval($user->point);
-            $user->save();
-
+            //insert pada reward
+            $reward = new Reward;
+            $reward->id_transaksi =  $request->id;
+            $reward->nominal =  (floatval($Transaksi->nominal) * 1/100);
+            $reward->status =  'reward';
+            $reward->notification =  'write';
+            if($reward->save()){
+                //menambahkan point pada user
+                $user = User::find($request->id_user);
+                $user->point = (floatval($Transaksi->nominal) * 1/100) + floatval($user->point);
+                $user->save();
+            }            
             return json_encode(['success'=>true]);
         }else{
             return json_encode(['success'=>false]);

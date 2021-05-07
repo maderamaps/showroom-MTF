@@ -20,12 +20,21 @@ class Notification extends Controller
         $withdraw = reward::Select ('reward.nominal as nomer','reward.created_at')
                                 ->join('transaksi','transaksi.id', '=', 'reward.id_transaksi')
                                 ->where('transaksi.id_user', '=', Auth::user()->id)
+                                ->where('reward.status', '=', 'withdraw confirmed')
+                                ->where('reward.notification', '=', 'write')
+                                ->addSelect(reward::raw("'withdraw' as type"))
+                                ->union($transaksi);
+
+        $reward = reward::Select ('reward.nominal as nomer','reward.created_at')
+                                ->join('transaksi','transaksi.id', '=', 'reward.id_transaksi')
+                                ->where('transaksi.id_user', '=', Auth::user()->id)
+                                ->where('reward.status', '=', 'reward')
                                 ->where('reward.notification', '=', 'write')
                                 ->addSelect(reward::raw("'reward' as type"))
-                                ->union($transaksi)
+                                ->union($withdraw)
                                 ->orderBy("created_at","desc")
                                 ->get();
-        return json_encode($withdraw);
+        return json_encode($reward);
     }
 
     public function userNotificationTransaksiUpdate(){

@@ -172,7 +172,7 @@ $(document).ready(function () {
   $("#submit").click(function () {
     if (parseFloat($("#point").text()) < parseFloat($("#inputWithdraw").val())) {
       alert("Point Tidak Cukup");
-    } else if (parseFloat($("#point").text()) > parseFloat($("#inputWithdraw").val()) && $("#inputWithdraw").val() !== null) {
+    } else if (parseFloat($("#point").text()) >= parseFloat($("#inputWithdraw").val()) && $("#inputWithdraw").val() !== null) {
       document.getElementById("formWithdraw").submit();
     }
   });

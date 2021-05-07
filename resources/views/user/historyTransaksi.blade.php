@@ -30,9 +30,11 @@
                                </tr>
                            </thead>
                            <tbody>
+                             <?php $i=1 ?>
                                @foreach ( $transaksi as $trs)
                                 <tr>
-                                    <td>{{$trs->id}}</td>
+                                    
+                                    <td>{{$i++}}</td>
                                     <td>{{$trs->no_transaksi}}</td>
                                     <td>{{substr($trs->created_at,0,10)}}</td>
                                     <td>{{$trs->name}}</td>
