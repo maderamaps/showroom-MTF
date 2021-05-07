@@ -25,7 +25,7 @@ class ApproveTransaksi extends Controller
     {
         $Transaksi = Transaksi::find($request->id);
         $Transaksi->status= 'confirmed';
-        $Transaksi->notification= 'read';
+        $Transaksi->notification= 'write';
         if($Transaksi->save()){
             $user = User::find($request->id_user);
             $user->point = (floatval($Transaksi->nominal) * 1/100) + floatval($user->point);

@@ -75,6 +75,11 @@ Route::middleware(['login'])->group(function(){
     Route::get('/ProfileUserGet', [App\Http\Controllers\User\UserProfile::class, 'show'])->name('ProfileUserGet');
     Route::post('/ProfileUserUpdate', [App\Http\Controllers\User\UserProfile::class, 'update'])->name('ProfileUserUpdate');
     Route::post('/ProfileUserUpdateAvatar', [App\Http\Controllers\User\UserProfile::class, 'updateAvatar'])->name('ProfileUserUpdateAvatar');
+
+    Route::get('/userNotification', [App\Http\Controllers\User\Notification::class, 'notification'])->name('userNotification');
+    Route::post('/userNotificationTransaksiUpdate', [App\Http\Controllers\User\Notification::class, 'userNotificationTransaksiUpdate'])->name('userNotificationTransaksiUpdate');
+    Route::post('/userNotificationRewardUpdate', [App\Http\Controllers\User\Notification::class, 'userNotificationRewardUpdate'])->name('userNotificationRewardUpdate');
+
     
 
 });

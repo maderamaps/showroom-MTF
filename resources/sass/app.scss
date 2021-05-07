@@ -119,3 +119,11 @@
     cursor: pointer;
     color: #1F3C78;
 }
+
+#notification {
+    z-index: 99 !important;
+}
+
+#notification a{
+    z-index: 99 !important;
+}

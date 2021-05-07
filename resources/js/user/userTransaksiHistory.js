@@ -26,7 +26,22 @@ $(document).ready(function() {
                 $( "#lastLink" ).before( '<li class="page-item"><a class="page-link" href="TransaksiUserHistory?page='+totalBtn+'">...</a></li>' );  
             }
         }
-        console.log(totalBtn);
+    }
+
+    updateNotification();
+    function updateNotification(){
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        $.ajax({
+            url: "userNotificationTransaksiUpdate",
+            type: "POST",
+            data: {
+                _token: CSRF_TOKEN,
+            },
+            cache: false,
+            success: function(dataResult){
+                
+            }
+        });
     }
 });
 

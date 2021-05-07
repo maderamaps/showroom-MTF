@@ -108,6 +108,22 @@ $(document).ready(function() {
         })
     }
 
+    updateNotification();
+    function updateNotification(){
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        $.ajax({
+            url: "userNotificationRewardUpdate",
+            type: "POST",
+            data: {
+                _token: CSRF_TOKEN,
+            },
+            cache: false,
+            success: function(dataResult){
+                
+            }
+        });
+    }
+
     window.links = function(currentPage,total,url){ 
         var content="";
         var temp=currentPage-2;

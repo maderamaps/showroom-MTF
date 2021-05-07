@@ -33,6 +33,7 @@ class ApproveWithdraw extends Controller
     {
         $Reward = Reward::find($request->id);
         $Reward->status= 'withdraw confirmed';
+        $Reward->notification= 'write';
         if($Reward->save()){
             event(new ApproveWithdraw($request->id));
             return json_encode(['success'=>true]);
