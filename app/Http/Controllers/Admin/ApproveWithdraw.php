@@ -19,7 +19,7 @@ class ApproveWithdraw extends Controller
 
     public function getDataAll()
     {
-        $Reward = Reward::select('reward.id','reward.nominal','reward.created_at','reward.id_transaksi','transaksi.no_transaksi','transaksi.id_user','users.name')
+        $Reward = Reward::select('reward.id','reward.nominal','reward.created_at','reward.id_transaksi','transaksi.id_user','users.name')
                     ->join('transaksi', 'transaksi.id', '=', 'reward.id_transaksi')
                     ->join('users', 'users.id', '=', 'transaksi.id_user')
                     ->where('reward.status', 'withdraw')

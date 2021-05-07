@@ -10,7 +10,7 @@
                 <table class="table-users">
                     <thead>
                         <tr>
-                            <th>No Transaksi</th>
+                            {{-- <th>No Transaksi</th> --}}
                             <th>Showroom</th>
                             <th>Nominal</th>
                             <th>Tanggal</th>

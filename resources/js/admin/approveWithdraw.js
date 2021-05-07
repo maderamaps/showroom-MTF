@@ -14,7 +14,7 @@ $(document).ready(function() {
                 var content = "";
                 for(i=0;i<dataResult.length;i++){
                     content += "<tr class='clickable-row' data-href='url://'>"
-                    content += "<td>"+ dataResult[i].no_transaksi +"</td>"
+                    // content += "<td>"+ dataResult[i].no_transaksi +"</td>"
                     content += "<td>"+ dataResult[i].name +"</td>"
                     content += "<td>"+ dataResult[i].nominal +"</td>"
                     content += "<td>"+ dataResult[i].created_at.substr(0,10) +"</td>"
