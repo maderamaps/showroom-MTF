@@ -15,30 +15,30 @@
         <div class="card-body">
             <div class="dashboard-item">
                 <a href="">
-                    <span class="badge" id="transaksiBadge"><p>3</p></span>
+                    <span class="badge" id="transaksiBadge"></span>
                     <img src="../image/Confirmed2.svg" alt="">
                     <p>Approve Transaksi</p>
                 </a>
             </div>
             <div class="dashboard-item">
                 <a href="">
-                    <span class="badge"><p>3</p></span>
+                    <span class="badge" id="withdrawBadge"></span>
                     <img src="../image/send_gift.svg" alt="">
                     <p>Approve Withdraw</p>
                 </a>
             </div>
             <div class="dashboard-item">
                 <a href="">
-                    <span class="badge"><p>3</p></span>
+                    <span class="badge" id="registerBadge"></span>
                     <img src="../image/Confirmation.svg" alt="">
                     <p>Register Confirm</p>
                 </a>
             </div>
             <div class="dashboard-item">
                 <a href="">
-                    <span class="badge"><p>3</p></span>
+                    <span class="badge"></span>
                     <img src="../image/Vehicle_sale.svg" alt="">
-                    <p>Approve Transaksi</p>
+                    <p>List Showroom</p>
                 </a>
             </div>
         </div>

@@ -49,7 +49,7 @@
                         <a class="nav-link" href="#">Contacts</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('/home') }}" class="nav-link">Get Started</a>
+                        <a href="{{ route('Dashboard') }}" class="nav-link">Get Started</a>
                     </li>
                 </ul>
             </div>

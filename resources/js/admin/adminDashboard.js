@@ -28,4 +28,17 @@ $(document).ready(function() {
             }
         })
     }
+    function notificationWithdraw(){
+        $.ajax({
+            url:"notificationTransaksi",
+            type: "get",
+            dataType: "json",
+            data: {
+                _token: CSRF_TOKEN
+            },
+            success: function(dataResult){
+                document.getElementById("transaksiBadge").innerHTML = dataResult;
+            }
+        })
+    }
 });

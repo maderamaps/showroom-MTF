@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Transaksi;
+use App\Models\User;
+use App\Models\Reward;
 
 
 class HomeController extends Controller
@@ -30,7 +32,17 @@ class HomeController extends Controller
     }
 
     public function notificationTransaksi(){
-        $transaksi = transaksi::where('notification', '=', null)->count();
+        $transaksi = transaksi::where('status', '=', 'delay')->count();
         return json_encode($transaksi);
+    }
+
+    public function notificationWithdraw(){
+        $withdraw = Reward::where('status', '=', 'withdraw')->count();
+        return json_encode($withdraw);
+    }
+
+    public function notificationRegister(){
+        $user = User::where('status', '=', 'delay')->count();
+        return json_encode($user);
     }
 }
