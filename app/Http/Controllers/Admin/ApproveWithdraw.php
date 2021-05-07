@@ -4,6 +4,8 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Events\ApproveWithdraw;
+
 use App\Models\Reward;
 
 
@@ -32,6 +34,7 @@ class ApproveWithdraw extends Controller
         $Reward = Reward::find($request->id);
         $Reward->status= 'withdraw confirmed';
         if($Reward->save()){
+            event(new ApproveWithdraw($request->id));
             return json_encode(['success'=>true]);
         }else{
             return json_encode(['success'=>false]);

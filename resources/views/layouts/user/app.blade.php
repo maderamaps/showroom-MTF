@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/notification.js') }}" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -69,7 +70,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a>
+                                    <a class="dropdown-item">
+                                        transaksi
+                                    </a>
+                                    <a class="dropdown-item">
                                         transaksi
                                     </a>
 
