@@ -14,28 +14,28 @@
         </div>
         <div class="card-body">
             <div class="dashboard-item">
-                <a href="">
+                <a href="{{route("ApproveTransaksi")}}">
                     <span class="badge" id="transaksiBadge"></span>
                     <img src="../image/Confirmed2.svg" alt="">
                     <p>Approve Transaksi</p>
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="">
+                <a href="{{route("ApproveWithdraw")}}">
                     <span class="badge" id="withdrawBadge"></span>
                     <img src="../image/send_gift.svg" alt="">
                     <p>Approve Withdraw</p>
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="">
+                <a href="{{route("RegisterConfirm")}}">
                     <span class="badge" id="registerBadge"></span>
                     <img src="../image/Confirmation.svg" alt="">
                     <p>Register Confirm</p>
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="">
+                <a href="{{route("ListShowroom")}}">
                     <span class="badge"></span>
                     <img src="../image/Vehicle_sale.svg" alt="">
                     <p>List Showroom</p>
