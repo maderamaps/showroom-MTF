@@ -16,8 +16,7 @@ channel.bind('transaksi-event', function (data) {
 var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 $(document).ready(function () {
   notificationTransaksi();
-  notificationWithdraw();
-  notificationRegister();
+
   function notificationTransaksi() {
     $.ajax({
       url: "notificationTransaksi",
@@ -34,27 +33,14 @@ $(document).ready(function () {
 
   function notificationWithdraw() {
     $.ajax({
-      url: "notificationWithdraw",
+      url: "notificationTransaksi",
       type: "get",
       dataType: "json",
       data: {
         _token: CSRF_TOKEN
       },
       success: function success(dataResult) {
-        document.getElementById("withdrawBadge").innerHTML = dataResult;
-      }
-    });
-  }
-  function notificationRegister() {
-    $.ajax({
-      url: "notificationRegister",
-      type: "get",
-      dataType: "json",
-      data: {
-        _token: CSRF_TOKEN
-      },
-      success: function success(dataResult) {
-        document.getElementById("registerBadge").innerHTML = dataResult;
+        document.getElementById("transaksiBadge").innerHTML = dataResult;
       }
     });
   }

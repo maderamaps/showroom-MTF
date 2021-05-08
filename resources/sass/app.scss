@@ -127,3 +127,15 @@
 #notification a{
     z-index: 99 !important;
 }
+
+footer div {
+    width: 100%;
+    background-color: #FACC07;
+    z-index: 10;
+    text-align: center;
+    height: 42px;
+    line-height: 20px;
+    position: fixed;
+    top: 97%;
+    display: block;
+}

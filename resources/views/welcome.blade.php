@@ -9,9 +9,10 @@
     
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="image/logo_mtf.png" type="image/png">
         
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -106,7 +107,7 @@
             </div> <!-- container -->
         </div> <!-- navbar area -->
         
-        <div id="home" class="header-hero bg_cover" style="background-image: url(assets/images/banner-bg.svg)">
+        <div id="home" class="header-hero bg_cover" style="background-image: url(assets/images/banner-bg-mtf.svg)">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -155,7 +156,7 @@
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Mudah</a></h4>
-                            <p class="text">Mandiri Tunas Finance Showroom ini sangat mudah di akses</p>
+                            <p class="text">Mandiri Tunas Finance Showroom ini sangat mudah digunakan sehingga semakin mudah untuk mendapatkan keuntungan</p>
                             <a class="more" href="{{ route('Dashboard') }}">Daftar <i class="lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
@@ -169,7 +170,7 @@
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Sesuai</a></h4>
-                            <p class="text">Mandiri Tunas Finance Showroom ini sangat sesuai untuk semua orang</p>
+                            <p class="text">Mandiri Tunas Finance Showroom ini sangat sesuai untuk pemilik showroom yang ingin mendapatkan keuntungan lebih</p>
                             <a class="more" href="{{ route('Dashboard') }}">Daftar <i class="lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
@@ -183,7 +184,7 @@
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Cepat</a></h4>
-                            <p class="text">Dapatkan reward dengan mudah dan cepat di Mandiri Tunas Finance Showroom.</p>
+                            <p class="text">Dapatkan double keuntungan dengan mudah dan cepat setiap melakukan transaksi menggunakan Mandiri Tunas Finance.</p>
                             <a class="more" href="{{ route('Dashboard') }}">Daftar <i class="lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
@@ -196,7 +197,7 @@
     
     <!--====== ABOUT PART START ======-->
     
-    <section id="about" class="about-area pt-70">
+    <section id="about" class="about-area pt-70" style="margin-bottom: 100px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -205,7 +206,8 @@
                             <div class="line"></div>
                             <h3 class="title">Cepat & Mudah <span>menggunakan Mandiri Tunas Finance Showroom</span></h3>
                         </div> <!-- section title -->
-                        <p class="text">Layanan Mandiri Tunas Finance Showroom mudah diakses oleh semua orang. Cepat reward menarik dari Mandiri Tunas Finance Showroom</p>
+                        <p class="text">Layanan Mandiri Tunas Finance Showroom ditunjukan bagi pemilik showroom yang ingin mendapatkan double keuntungan disetiap penjualannya. 
+                            Reward yang dapat ditarik kapanpun dengan mudah dan cepat di Mandiri Tunas Finance Showroom.</p>
                         <a href="{{ route('Dashboard') }}" class="main-btn">Coba Sekarang</a>
                     </div> <!-- about content -->
                 </div>
@@ -222,7 +224,11 @@
     </section>
     
     <!--====== ABOUT PART ENDS ======-->
-    
+    <footer>
+        <div>
+            Mandiri Tunas Finance
+        </div>
+    </footer> 
     
     
     
